@@ -1,0 +1,17 @@
+{
+  "name": "@salutejs/prettier-config",
+  "version": "0.1.0",
+  "description": "Salute prettier config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salute-developers/grail.git"
+  },
+  "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/prettier-config",
+  "peerDependencies": {
+    "prettier": ">= 2.0.5",
+    "typescript": ">= 3.8.0"
+  }
+}
