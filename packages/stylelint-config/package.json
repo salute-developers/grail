@@ -1,0 +1,21 @@
+{
+  "name": "@salutejs/stylelint-config",
+  "version": "0.1.0",
+  "description": "Salute stylelint config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salute-developers/grail.git"
+  },
+  "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/stylelint-config",
+  "peerDependencies": {
+    "stylelint": ">= 13.13.0",
+    "stylelint-config-recommended": ">= 3.0.0",
+    "stylelint-config-styled-components": ">= 0.1.1",
+    "stylelint-order": ">= 4.0.0",
+    "stylelint-processor-styled-components": ">= 1.10.0",
+    "stylelint-scss": ">= 3.17.1"
+  }
+}
