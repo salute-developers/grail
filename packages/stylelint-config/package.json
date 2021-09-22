@@ -1,6 +1,6 @@
 {
   "name": "@salutejs/stylelint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Salute stylelint config",
   "main": "index.js",
   "repository": {
