@@ -1,3 +1,15 @@
+# v0.3.0 (Mon Dec 13 2021)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config): add eslint-config-base with TS/JS rules [#150](https://github.com/salute-developers/grail/pull/150) (dexig@mail.ru)
+
+#### Authors: 1
+
+- Oleg Ozeritskiy (dexig@mail.ru)
+
+---
+
 # v0.2.1 (Tue Sep 28 2021)
 
 #### 🐛 Bug Fix
