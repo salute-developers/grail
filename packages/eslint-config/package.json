@@ -8,7 +8,7 @@
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "license": "UNLICENSED",
+  
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 2.29.0",
@@ -34,5 +34,8 @@
   },
   "dependencies": {
     "@salutejs/eslint-config-base": "0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
