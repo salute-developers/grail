@@ -1,3 +1,5 @@
+const prettierConfig = require('@salutejs/prettier-config');
+
 module.exports = {
     extends: [
         'airbnb-base',
@@ -51,7 +53,6 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-shadow': 'warn',
         'consistent-return': 'off',
-        'prettier/prettier': 'error',
 
         '@typescript-eslint/explicit-function-return-type': 'off',
 
@@ -68,6 +69,10 @@ module.exports = {
         'import/no-extraneous-dependencies': ['off'],
         'arrow-body-style': 'off',
         'no-unused-expressions': 'off',
+        'prettier/prettier': [
+            'error',
+            prettierConfig,
+        ],
     },
     overrides: [
         {
