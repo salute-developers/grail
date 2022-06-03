@@ -1,3 +1,23 @@
+# v0.4.0 (Fri Jun 03 2022)
+
+#### 🚀 Enhancement
+
+- feat(eslint-stylelint): public publish ([@KateKate](https://github.com/KateKate))
+- feat(stylelint-config): add pkg ([@Dexig](https://github.com/Dexig))
+
+#### 🐛 Bug Fix
+
+- Bump independent versions \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+- Update CHANGELOG.md \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+
+#### Authors: 3
+
+- [@Salute-Eva](https://github.com/Salute-Eva)
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Oleg ([@Dexig](https://github.com/Dexig))
+
+---
+
 # v0.3.0 (Fri Feb 04 2022)
 
 #### 🚀 Enhancement

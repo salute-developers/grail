@@ -1,0 +1,32 @@
+# (Fri Jun 03 2022)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config-base@0.3.0`, `@salutejs/eslint-config@0.5.0`, `@salutejs/stylelint-config@0.4.0`
+  - feat(eslint-stylelint): public publish ([@KateKate](https://github.com/KateKate))
+- `@salutejs/eslint-config@0.5.0`
+  - feat(eslint-config): add eslint-config-base with TS/JS rules ([@Dexig](https://github.com/Dexig))
+  - feat(eslint-config): add pkg ([@Dexig](https://github.com/Dexig))
+- `@salutejs/eslint-config-base@0.3.0`
+  - feat(eslint-config-base): add base config for eslint ([@Dexig](https://github.com/Dexig))
+- `@salutejs/stylelint-config@0.4.0`
+  - feat(stylelint-config): add pkg ([@Dexig](https://github.com/Dexig))
+- `@salutejs/prettier-config@0.3.0`
+  - feat(prettier-config): add pkg ([@Dexig](https://github.com/Dexig))
+
+#### 🐛 Bug Fix
+
+- `@salutejs/prettier-config@0.3.0`
+  - fix(prettier-config): public pkg [#1](https://github.com/salute-developers/grail/pull/1) ([@Yeti-or](https://github.com/Yeti-or))
+- `@salutejs/eslint-config@0.5.0`
+  - fix(eslint-config): user real typescript version ([@Dexig](https://github.com/Dexig))
+
+#### ⚠️ Pushed to `master`
+
+- ci: add basics ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 3
+
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Oleg ([@Dexig](https://github.com/Dexig))
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
