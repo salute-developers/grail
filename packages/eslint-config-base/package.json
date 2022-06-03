@@ -1,6 +1,6 @@
 {
   "name": "@salutejs/eslint-config-base",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Salute eslint base config",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,6 @@
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config-base",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 2.29.0",
