@@ -1,0 +1,39 @@
+{
+  "name": "grail",
+  "version": "0.0.0",
+  "description": "Holy grail of Salute Team configs",
+  "private": true,
+  "scripts": {
+    "release": "auto shipit",
+    "postinstall": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salute-developers/grail.git"
+  },
+  "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "homepage": "https://github.com/salute-developers/grail#readme",
+  "devDependencies": {
+    "@auto-it/conventional-commits": "10.37.1",
+    "@auto-it/npm": "10.37.1",
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
+    "auto": "10.37.1",
+    "husky": "8.0.1",
+    "lerna": "5.0.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.6.2",
+    "pretty-quick": "3.1.3"
+  },
+  "auto": {
+    "plugins": [
+      [
+        "npm",
+        {
+          "setRcToken": false
+        }
+      ],
+      "conventional-commits"
+    ]
+  }
+}
