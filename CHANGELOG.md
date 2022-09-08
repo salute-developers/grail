@@ -1,3 +1,21 @@
+# (Thu Sep 08 2022)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config-base@0.3.1`
+  - feat(eslint-config-base): add prettier config to eslint [#2](https://github.com/salute-developers/grail/pull/2) ([@Alisa007](https://github.com/Alisa007) [@Yeti-or](https://github.com/Yeti-or))
+
+#### 🐛 Bug Fix
+
+- ci: GITHUB_TOKEN => GH_TOKEN [#3](https://github.com/salute-developers/grail/pull/3) ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 2
+
+- [@Alisa007](https://github.com/Alisa007)
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # (Fri Jun 03 2022)
 
 #### 🚀 Enhancement

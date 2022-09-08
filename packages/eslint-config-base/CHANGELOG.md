@@ -1,3 +1,17 @@
+# v0.4.0 (Thu Sep 08 2022)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config-base): add prettier config to eslint [#2](https://github.com/salute-developers/grail/pull/2) ([@Alisa007](https://github.com/Alisa007) [@Yeti-or](https://github.com/Yeti-or))
+- feat(eslint-config-base): add prettier config to eslint ([@Alisa007](https://github.com/Alisa007))
+
+#### Authors: 2
+
+- [@Alisa007](https://github.com/Alisa007)
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # v0.3.0 (Fri Jun 03 2022)
 
 #### 🚀 Enhancement
