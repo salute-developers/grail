@@ -5,6 +5,25 @@
 - feat(eslint-config-base): add prettier config to eslint [#2](https://github.com/salute-developers/grail/pull/2) ([@Alisa007](https://github.com/Alisa007) [@Yeti-or](https://github.com/Yeti-or))
 - feat(eslint-config-base): add prettier config to eslint ([@Alisa007](https://github.com/Alisa007))
 
+#### 🐛 Bug Fix
+
+- Update CHANGELOG.md \[skip ci\] (yeti.or@gmail.com)
+
+#### Authors: 3
+
+- [@Alisa007](https://github.com/Alisa007)
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+- Vasiliy Loginevskiy (yeti.or@gmail.com)
+
+---
+
+# v0.4.0 (Thu Sep 08 2022)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config-base): add prettier config to eslint [#2](https://github.com/salute-developers/grail/pull/2) ([@Alisa007](https://github.com/Alisa007) [@Yeti-or](https://github.com/Yeti-or))
+- feat(eslint-config-base): add prettier config to eslint ([@Alisa007](https://github.com/Alisa007))
+
 #### Authors: 2
 
 - [@Alisa007](https://github.com/Alisa007)
