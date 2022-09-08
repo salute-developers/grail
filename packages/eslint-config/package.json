@@ -1,6 +1,6 @@
 {
   "name": "@salutejs/eslint-config",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Salute eslint config",
   "main": "index.js",
   "repository": {
@@ -32,7 +32,7 @@
     "typescript": ">= 3.8.3"
   },
   "dependencies": {
-    "@salutejs/eslint-config-base": "0.3.0"
+    "@salutejs/eslint-config-base": "0.4.0"
   },
   "publishConfig": {
     "access": "public"
