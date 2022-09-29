@@ -188,5 +188,6 @@ module.exports = {
             'rules',
         ],
         'order/properties-order': null,
+        'plugin/no-low-performance-animation-properties': true
     },
 };
