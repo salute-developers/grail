@@ -1,6 +1,7 @@
 module.exports = {
     extends: [
         'airbnb',
+        'airbnb/hooks',
         'prettier/react',
         '@salutejs/eslint-config-base',
     ],
