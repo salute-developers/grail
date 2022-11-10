@@ -1,3 +1,16 @@
+# (Thu Sep 29 2022)
+
+#### 🚀 Enhancement
+
+- `@salutejs/stylelint-config@0.5.0`
+  - feat(stylelint-config): add high-performance-animation plugin [#4](https://github.com/salute-developers/grail/pull/4) ([@RPG59](https://github.com/RPG59))
+
+#### Authors: 1
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+
+---
+
 # (Thu Sep 08 2022)
 
 #### 🚀 Enhancement
