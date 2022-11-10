@@ -1,3 +1,27 @@
+# (Thu Nov 10 2022)
+
+#### 🚀 Enhancement
+
+- `@salutejs/stylelint-config@0.6.0`
+  - feat(stylelint-config): add high-performance-animation plugin [#4](https://github.com/salute-developers/grail/pull/4) ([@RPG59](https://github.com/RPG59))
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@0.7.0`
+  - fix(eslint-config): add airbnb/hooks [#5](https://github.com/salute-developers/grail/pull/5) ([@RPG59](https://github.com/RPG59))
+
+#### ⚠️ Pushed to `master`
+
+- `@salutejs/stylelint-config@0.6.0`
+  - Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 2
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # (Thu Sep 29 2022)
 
 #### 🚀 Enhancement

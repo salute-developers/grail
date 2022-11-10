@@ -1,3 +1,21 @@
+# v0.7.0 (Thu Nov 10 2022)
+
+#### 🐛 Bug Fix
+
+- fix(eslint-config): add airbnb/hooks [#5](https://github.com/salute-developers/grail/pull/5) ([@RPG59](https://github.com/RPG59))
+- fix(eslint-config): add airbnb/hooks ([@RPG59](https://github.com/RPG59))
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 2
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # v0.5.0 (Fri Jun 03 2022)
 
 #### 🚀 Enhancement
