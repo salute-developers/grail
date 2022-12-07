@@ -23,6 +23,18 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-noninteractive-tabindex': 'off',
+        'no-restricted-imports': [
+            'error',
+            {
+                patterns: [
+                    '@salutejs/plasma-ui/*',
+                    '@salutejs/plasma-tokens/*',
+                    '@salutejs/plasma-icons/*',
+                    '@salutejs/plasma-web/*',
+                    '@salutejs/plasma-b2c/*'
+                ],
+            },
+        ],
     },
     overrides: [
         {
