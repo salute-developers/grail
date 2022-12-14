@@ -23,6 +23,13 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-noninteractive-tabindex': 'off',
+        'no-restricted-syntax': [
+            'error',
+            {
+                selector: "CallExpression[callee.name='useEffect'][arguments.0.body.body.length>10]",
+                message: 'go to read clean code',
+            },
+        ],
         'no-restricted-imports': [
             'error',
             {
