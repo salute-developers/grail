@@ -2,7 +2,7 @@ module.exports = {
     extends: [
         'airbnb',
         'airbnb/hooks',
-        'prettier/react',
+        'prettier',
         '@salutejs/eslint-config-base',
     ],
     parser: '@typescript-eslint/parser',
@@ -19,10 +19,13 @@ module.exports = {
         'react/destructuring-assignment': 'off',
         'react/sort-comp': 'off',
         'react/no-array-index-key': 'off',
+        'react/require-default-props': 'off',
+        'react/function-component-definition': 'off',
 
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-noninteractive-tabindex': 'off',
+
         'no-restricted-imports': [
             'error',
             {
@@ -35,6 +38,8 @@ module.exports = {
                 ],
             },
         ],
+
+        'default-param-last': 'warn',
     },
     overrides: [
         {
