@@ -1,5 +1,5 @@
 module.exports = {
-    plugins: ['stylelint-scss', 'stylelint-order'],
+    plugins: ['stylelint-scss', 'stylelint-order', 'stylelint-high-performance-animation'],
     processors: [
         [
             'stylelint-processor-styled-components',
