@@ -43,6 +43,9 @@ jobs:
       - name: Test
         run: npx lerna run test
 
+      - name: Release Info
+        run: npm whoami && npx auto info || echo 'auto info returned 1'
+
       - name: Create Release
         run: npm run release
 
