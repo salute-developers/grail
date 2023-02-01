@@ -1,5 +1,24 @@
 # (Wed Feb 01 2023)
 
+#### 💥 Breaking Change
+
+- `@salutejs/eslint-config@1.0.0`
+  - docs(eslint-config)!: add readme and bump major version [#10](https://github.com/salute-developers/grail/pull/10) ([@KateKate](https://github.com/KateKate))
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@1.0.0`
+  - feat(eslint-config): update to eslint8 [#10](https://github.com/salute-developers/grail/pull/10) ([@RPG59](https://github.com/RPG59))
+
+#### Authors: 2
+
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+
+---
+
+# (Wed Feb 01 2023)
+
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@0.11.0`
