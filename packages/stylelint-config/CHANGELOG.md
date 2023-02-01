@@ -1,3 +1,29 @@
+# v0.8.0 (Wed Feb 01 2023)
+
+#### 🚀 Enhancement
+
+- feat(stylelint-config): add high-performance-animation plugin [#4](https://github.com/salute-developers/grail/pull/4) ([@RPG59](https://github.com/RPG59))
+- feat(stylelint-config): add high-performance-animation plugin ([@RPG59](https://github.com/RPG59))
+
+#### 🐛 Bug Fix
+
+- Bump independent versions \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+- Update CHANGELOG.md \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+- fix(stylelint-config): add missed plugin to plugins config [#11](https://github.com/salute-developers/grail/pull/11) ([@RPG59](https://github.com/RPG59))
+- fix(stylelint-config): add missed plugin to plugins config ([@RPG59](https://github.com/RPG59))
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 3
+
+- [@Salute-Eva](https://github.com/Salute-Eva)
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # v0.7.0 (Tue Jan 31 2023)
 
 #### 🚀 Enhancement

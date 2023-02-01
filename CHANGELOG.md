@@ -1,3 +1,36 @@
+# (Wed Feb 01 2023)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@0.10.0`
+  - feat(eslint-config): restrict invalid imports from plasma [#7](https://github.com/salute-developers/grail/pull/7) ([@RPG59](https://github.com/RPG59))
+- `@salutejs/stylelint-config@0.8.0`
+  - feat(stylelint-config): add high-performance-animation plugin [#4](https://github.com/salute-developers/grail/pull/4) ([@RPG59](https://github.com/RPG59))
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@0.10.0`
+  - fix: check ci [#12](https://github.com/salute-developers/grail/pull/12) ([@Yeti-or](https://github.com/Yeti-or))
+  - fix(eslint-config): add airbnb/hooks [#5](https://github.com/salute-developers/grail/pull/5) ([@RPG59](https://github.com/RPG59))
+- `@salutejs/stylelint-config@0.8.0`
+  - fix(stylelint-config): add missed plugin to plugins config [#11](https://github.com/salute-developers/grail/pull/11) ([@RPG59](https://github.com/RPG59))
+
+#### ⚠️ Pushed to `master`
+
+- `@salutejs/eslint-config@0.10.0`, `@salutejs/stylelint-config@0.8.0`
+  - Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+- `@salutejs/eslint-config@0.10.0`
+  - Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+- `@salutejs/stylelint-config@0.8.0`
+  - Merge branch 'yeti-or.fix-ci' ([@Yeti-or](https://github.com/Yeti-or))
+
+#### Authors: 2
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- Vasiliy ([@Yeti-or](https://github.com/Yeti-or))
+
+---
+
 # (Tue Jan 31 2023)
 
 #### 🚀 Enhancement
