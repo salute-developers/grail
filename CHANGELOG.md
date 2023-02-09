@@ -1,3 +1,16 @@
+# (Thu Feb 09 2023)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@1.1.0`
+  - feat(eslint-config): disable react/jsx-no-useless-fragment [#14](https://github.com/salute-developers/grail/pull/14) ([@RPG59](https://github.com/RPG59))
+
+#### Authors: 1
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+
+---
+
 # (Wed Feb 01 2023)
 
 #### 💥 Breaking Change
