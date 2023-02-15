@@ -15,6 +15,8 @@ module.exports = {
         'react/jsx-one-expression-per-line': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
+        'react/display-name': 'error',
+        'react/jsx-no-leaked-render': 'error',
         'react/jsx-props-no-spreading': 'off',
         'react/destructuring-assignment': 'off',
         'react/sort-comp': 'off',
