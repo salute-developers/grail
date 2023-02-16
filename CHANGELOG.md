@@ -1,3 +1,17 @@
+# (Thu Feb 16 2023)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@1.2.0`
+  - feat(eslint-config): @typescript-eslint/member-ordering warn [#15](https://github.com/salute-developers/grail/pull/15) ([@KateKate](https://github.com/KateKate))
+  - feat(eslint-config): display-name, no-leaked-render [#15](https://github.com/salute-developers/grail/pull/15) ([@KateKate](https://github.com/KateKate))
+
+#### Authors: 1
+
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+
+---
+
 # (Thu Feb 09 2023)
 
 #### 🚀 Enhancement
