@@ -43,6 +43,15 @@ module.exports = {
         ],
 
         'default-param-last': 'warn',
+
+        '@typescript-eslint/member-ordering': [
+            'warn',
+            {
+                default: {
+                    optionalityOrder: 'required-first',
+                },
+            },
+        ],
     },
     overrides: [
         {
