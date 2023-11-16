@@ -1,3 +1,16 @@
+# v1.3.0 (Thu Nov 16 2023)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config): enable react/no-unstable-nested-components [#19](https://github.com/salute-developers/grail/pull/19) ([@arsenykruglikov](https://github.com/arsenykruglikov))
+- feat(eslint-config): enable react/no-unstable-nested-components ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+#### Authors: 1
+
+- Arseny Kruglikov ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+---
+
 # v1.2.0 (Thu Feb 16 2023)
 
 #### 🚀 Enhancement

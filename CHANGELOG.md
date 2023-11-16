@@ -1,3 +1,20 @@
+# (Thu Nov 16 2023)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@1.3.0`
+  - feat(eslint-config): enable react/no-unstable-nested-components [#19](https://github.com/salute-developers/grail/pull/19) ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+#### 🐛 Bug Fix
+
+- Create semgrep.yml [#17](https://github.com/salute-developers/grail/pull/17) ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+#### Authors: 1
+
+- Arseny Kruglikov ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+---
+
 # (Thu Feb 16 2023)
 
 #### 🚀 Enhancement
