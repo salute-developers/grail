@@ -43,6 +43,17 @@ module.exports = {
             },
         ],
 
+        'no-restricted-syntax': ["error", 
+            {
+                "selector": "CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) :matches(TemplateLiteral[expressions.length = 0], TemplateLiteral > Identifier, TemplateLiteral > Literal)",
+                "message": "Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization."
+            },
+            {
+                "selector": "CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) > Literal",
+                "message": "Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization."
+            },
+        ],
+
         'default-param-last': 'warn',
 
         '@typescript-eslint/member-ordering': [
