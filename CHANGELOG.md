@@ -1,3 +1,16 @@
+# (Wed Nov 22 2023)
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@1.3.1`
+  - eslint rule "Do not memorize primitives" for useMemo [#20](https://github.com/salute-developers/grail/pull/20) ([@SeanSilke](https://github.com/SeanSilke))
+
+#### Authors: 1
+
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+
+---
+
 # (Thu Nov 16 2023)
 
 #### 🚀 Enhancement
