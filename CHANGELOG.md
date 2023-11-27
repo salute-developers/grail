@@ -1,3 +1,17 @@
+# (Mon Nov 27 2023)
+
+#### 💥 Breaking Change
+
+- `@salutejs/eslint-config-base@1.0.0`
+  - (FINE-3282): eslint-base deps update [#21](https://github.com/salute-developers/grail/pull/21) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+
+#### Authors: 2
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # (Wed Nov 22 2023)
 
 #### 🐛 Bug Fix

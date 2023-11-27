@@ -1,3 +1,17 @@
+# v1.0.0 (Mon Nov 27 2023)
+
+#### 💥 Breaking Change
+
+- (FINE-3282): eslint-base deps update [#21](https://github.com/salute-developers/grail/pull/21) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+- feat(eslint-config-base)!: обновление зависимостей (gigivanov@sberbank.ru)
+
+#### Authors: 2
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # v0.4.0 (Thu Sep 08 2022)
 
 #### 🚀 Enhancement
