@@ -81,7 +81,7 @@ module.exports = {
             env: {
                 browser: true,
                 mocha: true,
-                'jest/globals': true,
+                'jest/globals': false,
             },
         },
     ]
