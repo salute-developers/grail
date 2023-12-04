@@ -1,5 +1,5 @@
 {
-  "name": "@salutejs/stylelint-config",
+  "name": "@salutejs/stylelint-config-test",
   "version": "0.8.0",
   "description": "Salute stylelint config",
   "main": "index.js",

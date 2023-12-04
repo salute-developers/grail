@@ -80,7 +80,7 @@ module.exports = {
             plugins: ['jest'],
             env: {
                 browser: true,
-                mocha: true,
+                mocha: false,
                 'jest/globals': false,
             },
         },
