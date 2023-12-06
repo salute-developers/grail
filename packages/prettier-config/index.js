@@ -1,12 +1,12 @@
 module.exports = {
-    parser: 'typescript',
-    arrowParens: 'always',
+    parser: "typescript",
+    arrowParens: "always",
     printWidth: 120,
-    jsxBracketSameLine: false,
+    bracketSameLine: false,
     jsxSingleQuote: false,
-    endOfLine: 'auto',
+    endOfLine: "auto",
     semi: true,
     singleQuote: true,
     tabWidth: 4,
-    trailingComma: 'all',
+    trailingComma: "all",
 };

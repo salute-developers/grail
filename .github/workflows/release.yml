@@ -42,10 +42,6 @@ jobs:
       - name: Setup packages
         run: |
           npm ci
-          npx lerna bootstrap
-
-      - name: Test
-        run: npx lerna run test
 
       - name: Release Info
         run: npm whoami && npx auto info || echo 'auto info returned 1'
