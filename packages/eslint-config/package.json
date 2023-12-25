@@ -9,6 +9,10 @@
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config",
+  "scripts": {
+    "test": "node ./rules/enforce-foo-bar.test.js",
+    "lint": "eslint example.js                                                                                                       "
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=6.12.0",
     "@typescript-eslint/parser": ">=6.12.0",
@@ -31,9 +35,15 @@
     "typescript": ">=4.3.5"
   },
   "dependencies": {
-    "@salutejs/eslint-config-base": "1.0.0"
+    "@salutejs/eslint-config-base": "1.0.0",
+    "eslint-plugin-local-rules": "2.0.1",
+    "eslint-config-my-rules": "file:./rules",
+    "eslint-plugin-my-rules": "file:./rules"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "eslint": "8.56.0"
   }
 }
