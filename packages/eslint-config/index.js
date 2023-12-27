@@ -1,10 +1,5 @@
 module.exports = {
-    extends: [
-        'airbnb',
-        'airbnb/hooks',
-        'prettier',
-        '@salutejs/eslint-config-base',
-    ],
+    extends: ['airbnb', 'airbnb/hooks', 'prettier', '@salutejs/eslint-config-base'],
     parser: '@typescript-eslint/parser',
     plugins: ['react'],
     rules: {
@@ -38,19 +33,24 @@ module.exports = {
                     '@salutejs/plasma-tokens/*',
                     '@salutejs/plasma-icons/*',
                     '@salutejs/plasma-web/*',
-                    '@salutejs/plasma-b2c/*'
+                    '@salutejs/plasma-b2c/*',
                 ],
             },
         ],
 
-        'no-restricted-syntax': ["error", 
+        'no-restricted-syntax': [
+            'error',
             {
-                "selector": "CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) :matches(TemplateLiteral[expressions.length = 0], TemplateLiteral > Identifier, TemplateLiteral > Literal)",
-                "message": "Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization."
+                selector:
+                    'CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) :matches(TemplateLiteral[expressions.length = 0], TemplateLiteral > Identifier, TemplateLiteral > Literal)',
+                message:
+                    'Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization.',
             },
             {
-                "selector": "CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) > Literal",
-                "message": "Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization."
+                selector:
+                    'CallExpression[callee.name = useMemo] :matches(ArrowFunctionExpression, ArrowFunctionExpression ReturnStatement, FunctionExpression ReturnStatement) > Literal',
+                message:
+                    'Do not memorize primitives https://dev.to/katekate/another-react-dos-and-donts-4ba0#:~:text=1.2.%20Avoid%20useMemo%20for%20primitive%20memoization.',
             },
         ],
 
@@ -75,7 +75,7 @@ module.exports = {
                 window: true,
                 document: true,
             },
-        }
+        },
     ],
     settings: {
         react: {
