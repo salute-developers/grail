@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ['airbnb', 'airbnb/hooks', 'prettier', '@salutejs/eslint-config-base'],
+    extends: ['airbnb', 'airbnb/hooks', 'prettier', '@salutejs/eslint-config-base', 'plugin:salute-rules/all'],
     parser: '@typescript-eslint/parser',
     plugins: ['react'],
     rules: {
