@@ -1,3 +1,26 @@
+# (Thu Dec 28 2023)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@2.1.0`
+  - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@2.1.0`
+  - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
+- `@salutejs/eslint-config-base@1.1.0`, `@salutejs/eslint-config@2.1.0`, `@salutejs/prettier-config@0.4.0`
+  - ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+
+#### Authors: 4
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # (Mon Nov 27 2023)
 
 #### 💥 Breaking Change

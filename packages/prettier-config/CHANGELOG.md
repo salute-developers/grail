@@ -1,3 +1,17 @@
+# v0.4.0 (Thu Dec 28 2023)
+
+#### 🐛 Bug Fix
+
+- ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+- ci: обновление CI тулов (gigivanov@sberbank.ru)
+
+#### Authors: 2
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # v0.3.0 (Fri Jun 03 2022)
 
 #### 🚀 Enhancement

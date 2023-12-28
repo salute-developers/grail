@@ -1,3 +1,25 @@
+# v2.1.0 (Thu Dec 28 2023)
+
+#### 🚀 Enhancement
+
+- feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
+- feat: custom rule no redundant commit ([@KateKate](https://github.com/KateKate))
+
+#### 🐛 Bug Fix
+
+- ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
+- ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+- ci: обновление CI тулов (gigivanov@sberbank.ru)
+
+#### Authors: 4
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # v1.3.1 (Wed Nov 22 2023)
 
 #### 🐛 Bug Fix
