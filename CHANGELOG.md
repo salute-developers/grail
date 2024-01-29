@@ -1,3 +1,28 @@
+# (Mon Jan 29 2024)
+
+#### 🚀 Enhancement
+
+- `@salutejs/eslint-config@2.3.0`
+  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@2.3.0`
+  - fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
+  - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
+- `@salutejs/eslint-config-base@1.2.0`, `@salutejs/eslint-config@2.3.0`, `@salutejs/prettier-config@0.5.0`
+  - ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+
+#### Authors: 4
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # (Mon Jan 22 2024)
 
 #### 🚀 Enhancement
