@@ -97,20 +97,34 @@ module.exports = {
         let isInAsync = false;
         let asyncRoot = null;
         let currentComponent = null;
-        let currentComponentSettersNames = [];
+        let currentComponentStateSettersNames = [];
+        let callExpressionNestingLevel = 0;
+        let UseEffectFunctionsNestingLevel = 0;
+        let currFunctionName;
 
         return {
             CallExpression(node) {
+                callExpressionNestingLevel++;
+
                 if (
-                    isInUseEffect &&
                     node.callee.type === 'Identifier' &&
-                    currentComponentSettersNames.includes(node.callee.name) &&
+                    currentComponentStateSettersNames.includes(node.callee.name) &&
                     !isInAsync
                 ) {
-                    context.report({
-                        node,
-                        message: 'Avoid using synchronous state setters within effects',
-                    });
+
+                    if (
+                        isInUseEffect &&
+                        callExpressionNestingLevel == 2 &&  // function is called on the level of useEffect(()=> {'around here and not deeper' }, [])
+                        UseEffectFunctionsNestingLevel == 1
+                        ) {
+                        context.report({
+                            node,
+                            message: 'Avoid using synchronous state setters within effects',
+                        });
+                    } else { // call is inside new function
+                        currentComponentStateSettersNames.push(currFunctionName);
+                    }
+
                 }
 
                 // Checking if the invoked function is useEffect
@@ -137,7 +151,7 @@ module.exports = {
 
                     const variableNodes = node.parent.id.elements;
                     const setterVariable = variableNodes[1];
-                    currentComponentSettersNames.push(setterVariable.name);
+                    currentComponentStateSettersNames.push(setterVariable.name);
                 }
 
                 if (
@@ -156,6 +170,7 @@ module.exports = {
             },
 
             'CallExpression:exit': function (node) {
+                callExpressionNestingLevel--;
                 if (node.callee.type === 'Identifier' && node.callee.name === 'useEffect') {
                     isInUseEffect = false;
                 }
@@ -176,14 +191,18 @@ module.exports = {
                 }
             },
 
-            FunctionDeclaration(node) {
+            ':function': function (node) {
                 if (node.async) {
                     isInAsync = true;
-
                     return;
                 }
 
                 const name = getFunctionName(node);
+                currFunctionName = name && name.name;
+
+                if (isInUseEffect) {
+                    UseEffectFunctionsNestingLevel++;
+                }
 
                 if (name && isComponentName(name)) {
                     // We  doesn't consider nested component declaration
@@ -191,34 +210,14 @@ module.exports = {
                 }
             },
 
-            'FunctionDeclaration:exit': function (node) {
+            ':function:exit': function (node) {
                 if (node === currentComponent) {
                     currentComponent = null;
-                    currentComponentSettersNames = [];
+                    currentComponentStateSettersNames = [];
                 }
 
-                if (node.async) {
-                    isInAsync = false;
-                }
-            },
-
-            ArrowFunctionExpression(node) {
-                const name = getFunctionName(node);
-
-                if (name && isComponentName(name)) {
-                    // We  doesn't consider nested component declaration
-                    currentComponent = node;
-                }
-
-                if (node.async) {
-                    isInAsync = true;
-                }
-            },
-
-            'ArrowFunctionExpression:exit': (node) => {
-                if (node === currentComponent) {
-                    currentComponent = null;
-                    currentComponentSettersNames = [];
+                if (isInUseEffect) {
+                    UseEffectFunctionsNestingLevel--;
                 }
 
                 if (node.async) {

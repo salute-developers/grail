@@ -100,6 +100,37 @@ const tests = {
       }      
       `,
         },
+        {
+            code: ` 
+      import React, { useState, useEffect } from 'react';      
+      function App() {
+        const [data, setData] = useState({ hits: [] });
+      
+        useEffect(() => {
+          button.addEventListener('click', () => {
+            setData(data)
+          })
+        });
+      }      
+      `,
+        },
+        {
+            code: ` 
+      import React, { useState, useEffect } from 'react';      
+      function App() {
+        const [data, setData] = useState({ hits: [] });
+
+          useEffect(() => {
+
+            function onSubmit (data) {
+              setData(data)
+            }
+
+            button.addEventListener('click', onSubmit);
+        });
+      }      
+      `,
+        },
     ],
     invalid: [
         {
@@ -150,7 +181,7 @@ const tests = {
         },
         {
             code: ` 
-      const MyComponent2 = () => {
+      const MyComponent = () => {
         const [didMount, setDidMount] = useState(false);
         const [count, setCount] = useState(0);
       
@@ -164,6 +195,40 @@ const tests = {
         }
         return <Loader />;
       }
+      `,
+            errors: [{ message: 'Avoid using synchronous state setters within effects' }],
+        },
+        {
+            code: `
+            const MyComponent = () => {
+              const [data, setData] = useState([]);
+
+              useEffect(() => {
+                const fn = (data) => {
+                  setData(data);
+                };
+                fn();
+              });
+
+              return <Loader />;
+            };
+      `,
+            errors: [{ message: 'Avoid using synchronous state setters within effects' }],
+        },
+        {
+            code: `
+            const MyComponent = () => {
+              const [data, setData] = useState([]);
+              const fn = (data) => {
+                setData(data);
+              };
+
+              useEffect(() => {
+                fn();
+              });
+
+              return <Loader />;
+            };
       `,
             errors: [{ message: 'Avoid using synchronous state setters within effects' }],
         },
