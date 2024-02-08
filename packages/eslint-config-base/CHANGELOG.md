@@ -1,3 +1,23 @@
+# v1.2.0 (Thu Feb 08 2024)
+
+#### 🐛 Bug Fix
+
+- fix: removed legacy-peer-deps [#33](https://github.com/salute-developers/grail/pull/33) ([@SeanSilke](https://github.com/SeanSilke))
+- fix: removed legacy-peer-deps ([@SeanSilke](https://github.com/SeanSilke))
+- "Bump independent versions \[skip ci\]" ([@Salute-Eva](https://github.com/Salute-Eva))
+- Update CHANGELOG.md \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+- ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+- ci: обновление CI тулов (gigivanov@sberbank.ru)
+
+#### Authors: 4
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- [@Salute-Eva](https://github.com/Salute-Eva)
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # v1.1.0 (Thu Dec 28 2023)
 
 #### 🐛 Bug Fix
