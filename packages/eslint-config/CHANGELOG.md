@@ -1,3 +1,41 @@
+# v2.8.0 (Thu Mar 07 2024)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config): add new rule prefer-lazy-state-initialization [#35](https://github.com/salute-developers/grail/pull/35) ([@SeanSilke](https://github.com/SeanSilke))
+- feat(eslint-config): add new rule prefer-lazy-state-initialization ([@SeanSilke](https://github.com/SeanSilke))
+- feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+- feat(eslint-config): added as a full-fledged rule ([@SeanSilke](https://github.com/SeanSilke))
+- feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
+- feat: custom rule no redundant commit ([@KateKate](https://github.com/KateKate))
+
+#### 🐛 Bug Fix
+
+- "Bump independent versions \[skip ci\]" ([@Salute-Eva](https://github.com/Salute-Eva))
+- Update CHANGELOG.md \[skip ci\] ([@Salute-Eva](https://github.com/Salute-Eva))
+- fix(eslint-config): disabled jsx-no-leaked-render [#34](https://github.com/salute-developers/grail/pull/34) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): disabled jsx-no-leaked-render ([@SeanSilke](https://github.com/SeanSilke))
+- fix: removed legacy-peer-deps [#33](https://github.com/salute-developers/grail/pull/33) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): add  nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): add nesting awareness for no-redundant-commit rule ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): changed the autofix option for jsx-no-leaked-render [#30](https://github.com/salute-developers/grail/pull/30) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): changed the autofix option for jsx-no-leaked-render ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): fixed typo and replaced link with shorter one ([@SeanSilke](https://github.com/SeanSilke))
+- ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
+- ci: обновление CI тулов [#23](https://github.com/salute-developers/grail/pull/23) (gigivanov@sberbank.ru [@gennadijivanov](https://github.com/gennadijivanov))
+- ci: обновление CI тулов (gigivanov@sberbank.ru)
+
+#### Authors: 5
+
+- [@gennadijivanov](https://github.com/gennadijivanov)
+- [@Salute-Eva](https://github.com/Salute-Eva)
+- Ekaterina Anishkina ([@KateKate](https://github.com/KateKate))
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+- Геннадий Иванов (gigivanov@sberbank.ru)
+
+---
+
 # v2.7.0 (Thu Feb 08 2024)
 
 #### 🚀 Enhancement
