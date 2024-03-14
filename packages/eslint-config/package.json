@@ -1,6 +1,6 @@
 {
   "name": "@salutejs/eslint-config",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Salute eslint config ",
   "main": "index.js",
   "repository": {
