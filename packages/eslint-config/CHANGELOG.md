@@ -1,3 +1,16 @@
+# v2.9.0 (Thu Mar 14 2024)
+
+#### 🚀 Enhancement
+
+- feat(eslint-config): new rulе no-modifying-ref-on-render [#37](https://github.com/salute-developers/grail/pull/37) ([@SeanSilke](https://github.com/SeanSilke))
+- feat(eslint-config): new rule no-modifying-ref-on-render ([@SeanSilke](https://github.com/SeanSilke))
+
+#### Authors: 1
+
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+
+---
+
 # v2.8.0 (Thu Mar 07 2024)
 
 #### 🚀 Enhancement
