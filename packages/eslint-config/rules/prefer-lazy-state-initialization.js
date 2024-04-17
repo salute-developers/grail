@@ -19,6 +19,7 @@ module.exports = {
 
     create: (context) => {
         let useStateCallExpression = null;
+        let nestingLevel = 0;
 
         return {
             CallExpression(node) {
@@ -27,8 +28,20 @@ module.exports = {
                     return;
                 }
 
-                if (useStateCallExpression) {
+                if (useStateCallExpression && nestingLevel === 0) {
                     context.report({ node, messageId: 'useLazyInitialization' });
+                }
+            },
+
+            ':function': function (node) {
+                if (useStateCallExpression) {
+                    nestingLevel++;
+                }
+            },
+
+            ':function:exit': function (node) {
+                if (useStateCallExpression) {
+                    nestingLevel--;
                 }
             },
 
