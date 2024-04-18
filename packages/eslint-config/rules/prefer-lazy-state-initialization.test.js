@@ -1,23 +1,20 @@
-/**
- * @fileoverview Detects function calls in useState and suggests using lazy initialization instead.
- * @author Patrick Gillespie
- */
-'use strict';
+const { RuleTester } = require('eslint');
+('use strict');
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
+const rule = require('./prefer-lazy-state-initialization');
 
-const rule = require('./prefer-lazy-state-initialization'),
-    RuleTester = require('eslint').RuleTester;
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
+const ruleTester = new RuleTester({
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        ecmaFeatures: {
+            jsx: true,
+        },
+    },
+});
 
 const message = rule.meta.messages.useLazyInitialization;
 
-const ruleTester = new RuleTester();
 ruleTester.run('prefer-lazy-state-initialization', rule, {
     valid: [
         // give me some code that won't trigger a warning
@@ -38,6 +35,15 @@ ruleTester.run('prefer-lazy-state-initialization', rule, {
         'useState(1 < 2 ? 3 : 4)',
         'useState(1 == 2 ? 3 : 4)',
         'useState(1 === 2 ? 3 : 4)',
+        'useState(()=>getValue());',
+        'useState(function(){ return  getValue()})',
+        {
+            code: `
+            const MyComponent = (props) => {
+                const [todos, setTodos] = useState(() => createTodos());
+                return <div>{todos}</div>;
+            }`,
+        },
     ],
 
     invalid: [
