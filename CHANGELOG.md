@@ -1,3 +1,16 @@
+# (Thu Apr 18 2024)
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@2.9.1`
+  - fix(eslint-config): fixed prefer-lazy [#39](https://github.com/salute-developers/grail/pull/39) ([@SeanSilke](https://github.com/SeanSilke))
+
+#### Authors: 1
+
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+
+---
+
 # (Thu Mar 14 2024)
 
 #### 🚀 Enhancement
