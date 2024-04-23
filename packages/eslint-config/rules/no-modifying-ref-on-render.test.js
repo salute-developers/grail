@@ -55,6 +55,37 @@ const tests = {
                 return <div>text</div>;
             }`,
         },
+        {
+            code: `
+            const MyComponent = (props) => {
+                const ref = useRef(props);
+                const a = useCallback((someValue) => {
+                    ref.current = someValue
+                },[])
+                return <button onClick={a}>text</button>;
+            }`,
+        },
+        {
+            code: `
+            const MyComponent = (props) => {
+                const ref = useRef(props);
+                const foo = (someValue) => {
+                    ref.current = someValue
+                }
+                const bar = () => foo('theVal')
+                return <button onClick={bar}>text</button>;
+            }`,
+        },
+        {
+            code: `
+            const MyComponent = (props) => {
+                const ref = useRef(props);
+                const a = useCallback((someValue) => {
+                    ref.current = someValue
+                }, [])
+                return <button onClick={a}>text</button>;
+            }`,
+        },
     ],
     invalid: [
         {
@@ -64,6 +95,30 @@ const tests = {
                 ref.current = props;
             
                 return <div>text</div>;
+            }`,
+            errors: [errorMsg()],
+        },
+        {
+            code: `
+            const MyComponent = (props) => {
+                const ref = useRef(props);
+                const a = useCallback((someValue) => {
+                    ref.current = someValue
+                }, [])
+                a()
+                return <button onClick={a}>text</button>;
+            }`,
+            errors: [errorMsg()],
+        },
+        {
+            code: `
+            const MyComponent = (props) => {
+                const ref = useRef(props);
+                const foo = (someValue) => {
+                    ref.current = someValue
+                }
+                foo();
+                return <button>text</button>;
             }`,
             errors: [errorMsg()],
         },

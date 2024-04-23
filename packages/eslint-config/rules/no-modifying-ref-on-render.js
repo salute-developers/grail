@@ -24,13 +24,22 @@ module.exports = {
 
     create: (context) => {
         let isInUseEffect = false;
+        let useCallbackNode;
+        let functionNestingStack = [];
         let currentComponent;
         let currentComponentRefNames = [];
+        let refModifyingFunctions = [];
+        let nestingLevel = 0;
 
         return {
             CallExpression(node) {
+                if (node.callee.type !== 'Identifier') {
+                    return;
+                }
+                const name = node.callee.name;
+
                 // Checking if the invoked function is useRef
-                if (node.callee.type === 'Identifier' && node.callee.name === 'useRef') {
+                if (name === 'useRef') {
                     const isDeclaration =
                         node.parent &&
                         node.parent.type === 'VariableDeclarator' &&
@@ -40,24 +49,40 @@ module.exports = {
                         return;
                     }
 
+                    // store all refs names
                     const refName = node.parent.id.name;
                     currentComponentRefNames.push(refName);
                 }
 
+                if (name === 'useCallback') {
+                    useCallbackNode = node;
+                }
+
                 // Checking if the invoked function is useEffect
-                if (node.callee.type === 'Identifier' && node.callee.name === 'useEffect') {
+                if (name === 'useEffect') {
                     isInUseEffect = true;
+                }
+
+                if (!refModifyingFunctions.includes(name) && nestingLevel === 0) {
+                    reportError(context, node);
                 }
             },
             'CallExpression:exit': function (node) {
                 if (node.callee.type === 'Identifier' && node.callee.name === 'useEffect') {
                     isInUseEffect = false;
                 }
+
+                if (node.callee.type === 'Identifier' && node.callee.name === 'useCallback') {
+                    useCallbackNode = null;
+                }
             },
 
             ':function': function (node) {
+                if (currentComponent) {
+                    nestingLevel++;
+                    functionNestingStack.push(node);
+                }
                 const name = getFunctionName(node);
-                currFunctionName = name && name.name;
 
                 if (name && isComponentName(name)) {
                     currentComponent = node;
@@ -68,16 +93,43 @@ module.exports = {
                 if (node === currentComponent) {
                     currentComponent = null;
                     currentComponentRefNames = [];
+                } else {
+                    nestingLevel--;
+                    functionNestingStack.pop();
                 }
             },
 
             'AssignmentExpression > MemberExpression': function (node) {
                 if (
                     currentComponentRefNames.includes(node.object.name) &&
-                    node.property.name === 'current' &&
+                    node.property.name === 'current' && // this is for ref.current
                     !isInUseEffect
                 ) {
-                    reportError(context, node);
+                    if (nestingLevel == 0) {
+                        reportError(context, node);
+                        //  Determining the function that alter the ref and store its name
+                    } else {
+                        if (useCallbackNode) {
+                            const isDeclaration =
+                                useCallbackNode.parent &&
+                                useCallbackNode.parent.type === 'VariableDeclarator' &&
+                                useCallbackNode.parent.id.type === 'Identifier';
+
+                            if (!isDeclaration) {
+                                return;
+                            }
+
+                            const callbackName = useCallbackNode.parent.id.name;
+                            refModifyingFunctions.push(callbackName);
+                        } else {
+                            const currFunction = functionNestingStack[functionNestingStack.length - 1];
+                            const name = getFunctionName(currFunction);
+                            const currFunctionName = name && name.name;
+                            if (currFunctionName) {
+                                refModifyingFunctions.push(currFunctionName);
+                            }
+                        }
+                    }
                 }
             },
         };
