@@ -1,3 +1,16 @@
+# v2.9.2 (Tue Apr 23 2024)
+
+#### 🐛 Bug Fix
+
+- fix(eslint-config): fixed no-modifying-ref [#40](https://github.com/salute-developers/grail/pull/40) ([@SeanSilke](https://github.com/SeanSilke))
+- fix(eslint-config): fixed no-modifying-ref ([@SeanSilke](https://github.com/SeanSilke))
+
+#### Authors: 1
+
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+
+---
+
 # v2.9.1 (Thu Apr 18 2024)
 
 #### 🐛 Bug Fix
