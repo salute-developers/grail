@@ -63,7 +63,7 @@ module.exports = {
                     isInUseEffect = true;
                 }
 
-                if (!refModifyingFunctions.includes(name) && nestingLevel === 0) {
+                if (refModifyingFunctions.includes(name) && nestingLevel === 0 && currentComponent) {
                     reportError(context, node);
                 }
             },
@@ -93,9 +93,12 @@ module.exports = {
                 if (node === currentComponent) {
                     currentComponent = null;
                     currentComponentRefNames = [];
+                    nestingLevel = 0;
                 } else {
-                    nestingLevel--;
-                    functionNestingStack.pop();
+                    if (currentComponent) {
+                        nestingLevel--;
+                        functionNestingStack.pop();
+                    }
                 }
             },
 
@@ -105,7 +108,7 @@ module.exports = {
                     node.property.name === 'current' && // this is for ref.current
                     !isInUseEffect
                 ) {
-                    if (nestingLevel == 0) {
+                    if (nestingLevel == 0 && currentComponent) {
                         reportError(context, node);
                         //  Determining the function that alter the ref and store its name
                     } else {

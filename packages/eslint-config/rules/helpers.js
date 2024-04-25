@@ -9,6 +9,7 @@
  */
 
 function getFunctionName(node) {
+    if (!node) return;
     if (node.type === 'FunctionDeclaration' || (node.type === 'FunctionExpression' && node.id)) {
         // function useHook() {}
         // const whatever = function useHook() {};
