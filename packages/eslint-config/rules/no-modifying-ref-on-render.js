@@ -1,4 +1,4 @@
-const { isComponentName, getFunctionName } = require('./helpers');
+const { isComponentName, getFunctionName, isHookName } = require('./helpers');
 // ------------------------------------------------------------------------------
 // Rule Definition
 // ------------------------------------------------------------------------------
@@ -27,6 +27,7 @@ module.exports = {
         let useCallbackNode;
         let functionNestingStack = [];
         let currentComponent;
+        let currentHook;
         let currentComponentRefNames = [];
         let refModifyingFunctions = [];
         let nestingLevel = 0;
@@ -63,7 +64,7 @@ module.exports = {
                     isInUseEffect = true;
                 }
 
-                if (refModifyingFunctions.includes(name) && nestingLevel === 0 && currentComponent) {
+                if (refModifyingFunctions.includes(name) && nestingLevel === 0 && (currentComponent || currentHook)) {
                     reportError(context, node);
                 }
             },
@@ -78,14 +79,19 @@ module.exports = {
             },
 
             ':function': function (node) {
-                if (currentComponent) {
+                if (currentComponent || currentHook) {
                     nestingLevel++;
                     functionNestingStack.push(node);
-                }
-                const name = getFunctionName(node);
+                } else {
+                    const name = getFunctionName(node);
 
-                if (name && isComponentName(name)) {
-                    currentComponent = node;
+                    if (name && isComponentName(name)) {
+                        currentComponent = node;
+                    }
+
+                    if (name && isHookName(name)) {
+                        currentHook = node;
+                    }
                 }
             },
 
@@ -94,11 +100,13 @@ module.exports = {
                     currentComponent = null;
                     currentComponentRefNames = [];
                     nestingLevel = 0;
-                } else {
-                    if (currentComponent) {
-                        nestingLevel--;
-                        functionNestingStack.pop();
-                    }
+                } else if (node === currentHook) {
+                    currentHook = null;
+                    currentComponentRefNames = [];
+                    nestingLevel = 0;
+                } else if (currentComponent || currentHook) {
+                    nestingLevel--;
+                    functionNestingStack.pop();
                 }
             },
 
@@ -108,7 +116,7 @@ module.exports = {
                     node.property.name === 'current' && // this is for ref.current
                     !isInUseEffect
                 ) {
-                    if (nestingLevel == 0 && currentComponent) {
+                    if (nestingLevel == 0 && (currentComponent || currentHook)) {
                         reportError(context, node);
                         //  Determining the function that alter the ref and store its name
                     } else {

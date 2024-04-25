@@ -67,5 +67,10 @@ function isComponentName(node) {
     return node.type === 'Identifier' && /^[A-Z]/.test(node.name);
 }
 
+function isHookName(node) {
+    return node.type === 'Identifier' && /^use[A-Z0-9]/.test(node.name);
+}
+
 exports.isComponentName = isComponentName;
 exports.getFunctionName = getFunctionName;
+exports.isHookName = isHookName;
