@@ -33,6 +33,15 @@ const tests = {
       `,
         },
         {
+            code: `
+      function MyComponent() {
+        const [constant] = useState(false);
+
+        return <Component />;
+      }
+      `,
+        },
+        {
             code: ` 
       function MyComponent() {
         const [data, setData] = useState('');
