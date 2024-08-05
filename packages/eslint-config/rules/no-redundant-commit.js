@@ -84,7 +84,7 @@ module.exports = {
 
                     const variableNodes = node.parent.id.elements;
                     const setterVariable = variableNodes[1];
-                    currentComponentStateSettersNames.push(setterVariable.name);
+                    setterVariable && currentComponentStateSettersNames.push(setterVariable.name);
                 }
 
                 if (
