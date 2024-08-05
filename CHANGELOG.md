@@ -1,3 +1,16 @@
+# (Mon Aug 05 2024)
+
+#### 🐛 Bug Fix
+
+- `@salutejs/eslint-config@2.9.4`
+  - fix(eslint-config): fixed no-redundant-commit [#43](https://github.com/salute-developers/grail/pull/43) ([@SeanSilke](https://github.com/SeanSilke))
+
+#### Authors: 1
+
+- Sergey Orlov ([@SeanSilke](https://github.com/SeanSilke))
+
+---
+
 # (Thu Apr 25 2024)
 
 #### 🐛 Bug Fix
