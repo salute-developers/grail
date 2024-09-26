@@ -1,14 +1,5 @@
 {
-    "*.{js,jsx,ts,tsx}": [
-        "prettier --write"
-    ],
-    "*.md": [
-        "prettier --write --parser markdown",
-        "git add"
-    ],
-    "*.json": [
-        "prettier --write --parser json",
-        "node",
-        "git add"
-    ]
+    "*.{js,jsx,ts,tsx}": ["prettier --write"],
+    "*.md": ["prettier --write --parser markdown", "git add"],
+    "*.json": ["prettier --write --parser json", "node", "git add"]
 }

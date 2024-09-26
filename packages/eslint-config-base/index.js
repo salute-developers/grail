@@ -1,14 +1,12 @@
-const prettierConfig = require('@salutejs/prettier-config');
-
 module.exports = {
     extends: [
-        'airbnb-base',
+        'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:cypress/recommended'
+        'plugin:import/recommended',
     ],
     parser: '@typescript-eslint/parser',
-    plugins: ['import', 'prettier', 'cypress'],
+    plugins: ['@typescript-eslint'],
     rules: {
         '@typescript-eslint/no-empty-function': 'off',
         'no-restricted-syntax': 'off', // В for...of циклах ничего плохого нет
@@ -69,20 +67,5 @@ module.exports = {
         'import/no-extraneous-dependencies': ['off'],
         'arrow-body-style': 'off',
         'no-unused-expressions': 'off',
-        'prettier/prettier': [
-            'error',
-            prettierConfig,
-        ],
     },
-    overrides: [
-        {
-            files: ['*.test.tsx?', '*.test.js'],
-            plugins: ['jest'],
-            env: {
-                browser: true,
-                mocha: true,
-                'jest/globals': true,
-            },
-        },
-    ]
 };

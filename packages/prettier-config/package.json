@@ -2,13 +2,13 @@
   "name": "@salutejs/prettier-config",
   "version": "0.4.0",
   "description": "Salute prettier config",
-  "main": "index.js",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/prettier-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/prettier-config",
+  "main": "index.js",
   "peerDependencies": {
     "prettier": ">=3.1.0",
     "typescript": ">=4.3.5"

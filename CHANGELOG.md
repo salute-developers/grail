@@ -69,7 +69,7 @@
 
 - `@salutejs/eslint-config@2.8.0`
   - feat(eslint-config): add new rule prefer-lazy-state-initialization [#35](https://github.com/salute-developers/grail/pull/35) ([@SeanSilke](https://github.com/SeanSilke))
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix
@@ -77,7 +77,7 @@
 - fix: update auto [#36](https://github.com/salute-developers/grail/pull/36) ([@SeanSilke](https://github.com/SeanSilke))
 - `@salutejs/eslint-config@2.8.0`
   - fix(eslint-config): disabled jsx-no-leaked-render [#34](https://github.com/salute-developers/grail/pull/34) ([@SeanSilke](https://github.com/SeanSilke))
-  - fix(eslint-config): add  nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
+  - fix(eslint-config): add nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): changed the autofix option for jsx-no-leaked-render [#30](https://github.com/salute-developers/grail/pull/30) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
   - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
@@ -100,14 +100,14 @@
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@2.7.0`
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix
 
 - `@salutejs/eslint-config@2.7.0`
   - fix(eslint-config): disabled jsx-no-leaked-render [#34](https://github.com/salute-developers/grail/pull/34) ([@SeanSilke](https://github.com/SeanSilke))
-  - fix(eslint-config): add  nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
+  - fix(eslint-config): add nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): changed the autofix option for jsx-no-leaked-render [#30](https://github.com/salute-developers/grail/pull/30) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
   - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
@@ -130,7 +130,7 @@
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@2.6.0`
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix
@@ -138,7 +138,7 @@
 - `@salutejs/eslint-config-base@1.2.0`
   - fix: removed legacy-peer-deps [#33](https://github.com/salute-developers/grail/pull/33) ([@SeanSilke](https://github.com/SeanSilke))
 - `@salutejs/eslint-config@2.6.0`
-  - fix(eslint-config): add  nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
+  - fix(eslint-config): add nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): changed the autofix option for jsx-no-leaked-render [#30](https://github.com/salute-developers/grail/pull/30) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
   - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
@@ -159,13 +159,13 @@
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@2.5.0`
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix
 
 - `@salutejs/eslint-config@2.5.0`
-  - fix(eslint-config): add  nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
+  - fix(eslint-config): add nesting awareness for no-redundant-commit rule [#31](https://github.com/salute-developers/grail/pull/31) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): changed the autofix option for jsx-no-leaked-render [#30](https://github.com/salute-developers/grail/pull/30) ([@SeanSilke](https://github.com/SeanSilke))
   - fix(eslint-config): fixed typo and replaced link with shorter one [#28](https://github.com/salute-developers/grail/pull/28) ([@SeanSilke](https://github.com/SeanSilke))
   - ci: add prettierc.js, fix package-lock [#26](https://github.com/salute-developers/grail/pull/26) ([@KateKate](https://github.com/KateKate))
@@ -186,7 +186,7 @@
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@2.4.0`
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix
@@ -212,7 +212,7 @@
 #### 🚀 Enhancement
 
 - `@salutejs/eslint-config@2.3.0`
-  - feat(eslint-config): added `Do not memoize primitives`  as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
+  - feat(eslint-config): added `Do not memoize primitives` as a full-fledged rule [#29](https://github.com/salute-developers/grail/pull/29) ([@SeanSilke](https://github.com/SeanSilke))
   - feat: custom rule no redundant commit [#25](https://github.com/salute-developers/grail/pull/25) ([@KateKate](https://github.com/KateKate) [@SeanSilke](https://github.com/SeanSilke))
 
 #### 🐛 Bug Fix

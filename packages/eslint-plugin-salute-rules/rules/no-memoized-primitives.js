@@ -2,7 +2,7 @@
 // Rule Definition
 // ------------------------------------------------------------------------------
 
-function reportError (context, node) {
+function reportError(context, node) {
     context.report({
         node,
         message: 'Do not memoize primitives',
@@ -53,7 +53,7 @@ module.exports = {
                 node,
             ) {
                 if (currentUseMemoNode && nestingLevel === 1) {
-                    reportError(context,node)
+                    reportError(context, node);
                 }
             },
 
@@ -61,7 +61,7 @@ module.exports = {
             ':matches(ArrowFunctionExpression, ReturnStatement) > TemplateLiteral > :matches(Literal, Identifier)':
                 function (node) {
                     if (currentUseMemoNode && nestingLevel === 1) {
-                        reportError(context,node)
+                        reportError(context, node);
                     }
                 },
 
@@ -76,7 +76,7 @@ module.exports = {
                     return;
                 }
                 if (currentUseMemoNode && nestingLevel === 1) {
-                    reportError(context,node)
+                    reportError(context, node);
                 }
             },
         };

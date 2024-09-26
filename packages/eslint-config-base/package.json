@@ -2,25 +2,18 @@
   "name": "@salutejs/eslint-config-base",
   "version": "1.2.0",
   "description": "Salute eslint base config",
-  "main": "index.js",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config-base",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config-base",
+  "main": "index.js",
   "peerDependencies": {
-    "@salutejs/prettier-config": ">0.3.0",
-    "@typescript-eslint/eslint-plugin": ">=6.12.0",
-    "@typescript-eslint/parser": ">=6.12.0",
-    "eslint": ">=8.54.0",
-    "eslint-config-airbnb-base": ">=15.0.0",
-    "eslint-config-prettier": ">=9.0.0",
-    "eslint-plugin-cypress": ">=2.15.1",
-    "eslint-plugin-import": ">=2.29.0",
-    "eslint-plugin-jest": ">=27.6.0",
-    "eslint-plugin-prettier": ">=5.0.1",
-    "prettier": ">=3.1.0",
+    "@typescript-eslint/eslint-plugin": ">=8",
+    "@typescript-eslint/parser": ">=8",
+    "eslint": ">=8 <9",
+    "eslint-plugin-import": ">=2",
     "typescript": ">=4.3.5"
   },
   "publishConfig": {
