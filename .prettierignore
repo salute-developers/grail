@@ -1,4 +1,2 @@
 node_modules
-lerna.json
-package.json
 package-lock.json

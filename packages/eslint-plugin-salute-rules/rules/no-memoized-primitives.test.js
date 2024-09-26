@@ -138,7 +138,7 @@ const tests = {
 };
 
 function errorMsg() {
-    return { message: 'Do not memoize primitives' }
+    return { message: 'Do not memoize primitives' };
 }
 
 ruleTester.run('no-memoized-primitives', rule, tests);

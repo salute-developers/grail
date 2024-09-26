@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        [
+            "npm",
+            {
+                "setRcToken": false
+            }
+        ],
+        "./format-before-commit.js"
+    ]
+}

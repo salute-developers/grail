@@ -1,22 +1,5 @@
 {
+  "$schema": "./node_modules/lerna/schemas/lerna-schema.json",
   "version": "independent",
-  "ignoreChanges": ["*.md"],
-  "loglevel": "verbose",
-  "exact": true,
-  "ci": true,
-  "command": {
-      "bootstrap": {
-          "npmClientArgs": [
-              "--no-audit",
-              "--no-optional",
-              "--loglevel error",
-              "--no-progress",
-              "--unsafe-perm",
-              "--prefer-offline"
-          ]
-      },
-      "publish": {
-          "verifyAccess": false
-      }
-  }
+  "packages": ["packages/*"]
 }

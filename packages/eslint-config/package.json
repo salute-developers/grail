@@ -2,45 +2,33 @@
   "name": "@salutejs/eslint-config",
   "version": "2.9.4",
   "description": "Salute eslint config ",
-  "main": "index.js",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config",
-  "scripts": {
-    "test": "mocha ./rules"
+  "main": "index.js",
+  "dependencies": {
+    "@salutejs/eslint-config-base": "*",
+    "eslint-plugin-salute-rules": "*"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=6.12.0",
-    "@typescript-eslint/parser": ">=6.12.0",
-    "eslint": ">=8.54.0",
-    "eslint-config-airbnb": ">= 19.0.4",
-    "eslint-config-prettier": ">=9.0.0",
-    "eslint-config-react-app": ">= 7.0.1",
-    "eslint-plugin-cypress": ">=2.15.1",
-    "eslint-plugin-flowtype": ">= 8.0.3",
-    "eslint-plugin-import": ">=2.29.0",
-    "eslint-plugin-jest": ">=27.6.0",
-    "eslint-plugin-jsx-a11y": ">= 6.7.1",
-    "eslint-plugin-no-only-tests": ">= 3.1.0",
-    "eslint-plugin-prettier": ">=5.0.1",
-    "eslint-plugin-react": ">= 7.32.0",
-    "eslint-plugin-react-hooks": ">= 4.6.0",
-    "eslint-plugin-react-perf": ">= 3.3.1",
-    "eslint-plugin-vue": ">= 9.9.0",
-    "prettier": ">=3.1.0",
+    "@salutejs/prettier-config": "*",
+    "@typescript-eslint/eslint-plugin": ">=8",
+    "@typescript-eslint/parser": ">=8",
+    "eslint": ">=8 <9",
+    "eslint-config-prettier": ">=9",
+    "eslint-plugin-import": ">=2",
+    "eslint-plugin-jsx-a11y": ">=6",
+    "eslint-plugin-prettier": ">=5",
+    "eslint-plugin-react": ">=7",
+    "eslint-plugin-react-hooks": ">=4",
+    "eslint-plugin-react-perf": ">=3",
+    "prettier": ">=3.1",
     "typescript": ">=4.3.5"
-  },
-  "dependencies": {
-    "@salutejs/eslint-config-base": "1.2.0",
-    "eslint-plugin-salute-rules": "file:./rules"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "eslint": ">=8.54.0"
   }
 }

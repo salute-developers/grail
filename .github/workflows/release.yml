@@ -12,12 +12,12 @@ jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    if: (!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci'))
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Prepare repository
         run: git fetch --unshallow --tags
@@ -26,13 +26,13 @@ jobs:
         # https://github.com/intuit/auto/issues/1030
         run: git config --local --unset http.https://github.com/.extraheader
 
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 20.x LTS
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version-file: '.nvmrc'
 
       - name: Cache node modules
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: npm-deps-${{ hashFiles('package-lock.json') }}
@@ -43,9 +43,12 @@ jobs:
         run: |
           npm ci
 
+      - name: Test
+        run: |
+          npm run test
+
       - name: Release Info
         run: npm whoami && npx auto info || echo 'auto info returned 1'
 
       - name: Create Release
         run: npm run release
-

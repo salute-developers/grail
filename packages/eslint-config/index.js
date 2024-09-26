@@ -1,7 +1,15 @@
+const prettierConfig = require('@salutejs/prettier-config');
+
 module.exports = {
-    extends: ['airbnb', 'airbnb/hooks', 'prettier', '@salutejs/eslint-config-base', 'plugin:salute-rules/all'],
-    parser: '@typescript-eslint/parser',
-    plugins: ['react'],
+    extends: [
+        '@salutejs/eslint-config-base',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:react-perf/recommended',
+        'plugin:jsx-a11y/recommended',
+        'plugin:salute-rules/all',
+        'plugin:prettier/recommended',
+    ],
     rules: {
         'react/prop-types': 'off',
         'react/static-property-placement': 'off',
@@ -48,6 +56,7 @@ module.exports = {
                 },
             },
         ],
+        'prettier/prettier': ['error', prettierConfig],
     },
     overrides: [
         {
@@ -63,7 +72,7 @@ module.exports = {
     ],
     settings: {
         react: {
-            version: '16.13.1',
+            version: '18.3.1',
         },
     },
 };

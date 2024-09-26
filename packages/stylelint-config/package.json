@@ -2,13 +2,13 @@
   "name": "@salutejs/stylelint-config",
   "version": "0.8.0",
   "description": "Salute stylelint config",
-  "main": "index.js",
+  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/stylelint-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "homepage": "https://github.com/salute-developers/grail/tree/master/packages/stylelint-config",
+  "main": "index.js",
   "peerDependencies": {
     "stylelint": ">= 13.13.0",
     "stylelint-config-recommended": ">= 3.0.0",

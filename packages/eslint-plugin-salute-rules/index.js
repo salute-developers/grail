@@ -1,11 +1,12 @@
-const projectName = 'salute-rules';
-
 const fs = require('fs');
 const path = require('path');
 
+const projectName = 'salute-rules';
+
 const ruleFiles = fs
-    .readdirSync(__dirname)
-    .filter((file) => !['index.js', 'helpers.js'].includes(file) && !file.endsWith('test.js'));
+    .readdirSync(path.join(__dirname, 'rules'))
+    .filter((file) => !['index.js', 'helpers.js'].includes(file) && !file.endsWith('test.js'))
+    .map((file) => path.join('./rules', file));
 
 const configs = {
     all: {
