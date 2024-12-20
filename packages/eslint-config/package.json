@@ -10,8 +10,10 @@
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "main": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./9": "./index.mjs"
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    }
   },
   "dependencies": {
     "@salutejs/eslint-config-base": "*",
