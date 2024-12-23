@@ -10,14 +10,16 @@
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "main": "index.js",
   "exports": {
-    ".": {
-      "require": "./index.js",
-      "import": "./index.mjs"
-    }
+    ".": "./index.js",
+    "./flat": "./src/index.js"
+  },
+  "scripts": {
+    "test": "jest"
   },
   "dependencies": {
     "@salutejs/eslint-config-base": "*",
-    "eslint-plugin-salute-rules": "*"
+    "eslint-plugin-salute-rules": "*",
+    "jest": "29.7.0"
   },
   "peerDependencies": {
     "@salutejs/prettier-config": "*",
