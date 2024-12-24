@@ -18,6 +18,6 @@ npm i -D @salutejs/prettier-config @typescript-eslint/eslint-plugin@8 @typescrip
 
 ```json
 {
-    "extends": ["all-other-configs", "@salutejs/eslint-config"]
+  "extends": ["all-other-configs", "@salutejs/eslint-config"]
 }
 ```

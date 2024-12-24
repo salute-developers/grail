@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import eslintConfigBase from '@salutejs/eslint-config-base';
 import reactPlugin from 'eslint-plugin-react';

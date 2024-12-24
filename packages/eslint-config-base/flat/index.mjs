@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 
 import eslintRecommended from '@eslint/js';
 import tsEslintRecommended from '@typescript-eslint/eslint-plugin';

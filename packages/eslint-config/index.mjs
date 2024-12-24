@@ -1,4 +1,4 @@
-import prettierConfig from "@salutejs/prettier-config"
+import prettierConfig from '@salutejs/prettier-config';
 
 export default {
     extends: [
