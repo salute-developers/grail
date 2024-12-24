@@ -11,7 +11,7 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./flat": "./src/index.js"
+    "./flat": "./index.mjs"
   },
   "scripts": {
     "test": "jest"

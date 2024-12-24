@@ -9,6 +9,10 @@
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./index.mjs"
+  },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=8",
     "@typescript-eslint/parser": ">=8",
