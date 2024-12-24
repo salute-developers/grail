@@ -37,5 +37,10 @@
     "lerna": "8.1.8",
     "prettier": "3.3.3",
     "prettier-plugin-packagejson": "2.5.2"
+  },
+  "dependencies": {
+    "@salutejs/eslint-config": "2.9.4",
+    "@salutejs/eslint-config-base": "1.2.0",
+    "@salutejs/stylelint-config": "0.8.0"
   }
 }

@@ -10,8 +10,11 @@
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "main": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./flat": "./index.mjs"
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    },
+    "./flat": "./flat/index.mjs"
   },
   "scripts": {
     "test": "jest"
