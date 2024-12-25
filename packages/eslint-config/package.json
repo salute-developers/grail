@@ -16,13 +16,9 @@
     "./flat": "./flat/index.mjs"
   },
   "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
   "dependencies": {
     "@salutejs/eslint-config-base": "*",
-    "eslint-plugin-salute-rules": "*",
-    "jest": "29.7.0"
+    "eslint-plugin-salute-rules": "*"
   },
   "peerDependencies": {
     "@salutejs/prettier-config": "*",
