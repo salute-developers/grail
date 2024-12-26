@@ -24,7 +24,7 @@ npm i -D @salutejs/prettier-config @typescript-eslint/eslint-plugin@8 @typescrip
 
 ## Flat config for eslint
 
-Also, we added a flat configuration for ESLint
+Also, we added a [flat configuration for ESLint](https://eslint.org/docs/latest/use/configure/configuration-files)
 
 ### Usage
 
