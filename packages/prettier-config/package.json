@@ -8,6 +8,12 @@
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
   "main": "index.js",
   "peerDependencies": {
     "prettier": ">=3.1.0",

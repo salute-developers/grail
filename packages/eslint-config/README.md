@@ -18,6 +18,25 @@ npm i -D @salutejs/prettier-config @typescript-eslint/eslint-plugin@8 @typescrip
 
 ```json
 {
-    "extends": ["all-other-configs", "@salutejs/eslint-config"]
+  "extends": ["all-other-configs", "@salutejs/eslint-config"]
 }
+```
+
+## Flat config for eslint
+
+Also, we added a [flat configuration for ESLint](https://eslint.org/docs/latest/use/configure/configuration-files)
+
+### Usage
+
+```mjs
+// Other imports
+import flatConfig from "@salutejs/eslint-config/flat"
+
+
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  ...flatConfig,
+  //... Other settings
+];
+
 ```

@@ -8,6 +8,13 @@
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    },
+    "./flat": "./flat/index.mjs"
+  },
   "main": "index.js",
   "dependencies": {
     "@salutejs/eslint-config-base": "*",
