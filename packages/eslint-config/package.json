@@ -24,7 +24,7 @@
     "@salutejs/prettier-config": "*",
     "@typescript-eslint/eslint-plugin": ">=8",
     "@typescript-eslint/parser": ">=8",
-    "eslint": ">=8 <9",
+    "eslint": ">=8",
     "eslint-config-prettier": ">=9",
     "eslint-plugin-import": ">=2",
     "eslint-plugin-jsx-a11y": ">=6",
