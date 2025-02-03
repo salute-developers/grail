@@ -1,6 +1,6 @@
 'use strict';
 
-import eslintConfigBase from '@salutejs/eslint-config-base';
+import eslintConfigBase from '@salutejs/eslint-config-base/flat';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactPerfPlugin from 'eslint-plugin-react-perf';
