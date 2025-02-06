@@ -4,51 +4,48 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  CI: true
+  NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
 jobs:
-  publish:
-    name: Publish
+  release:
+    name: Release
     runs-on: ubuntu-latest
-    if: (!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci'))
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-      - name: Prepare repository
-        run: git fetch --unshallow --tags
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: Unset header
-        # https://github.com/intuit/auto/issues/1030
-        run: git config --local --unset http.https://github.com/.extraheader
-
-      - name: Use Node.js 20.x LTS
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: .node-version
+          check-latest: true
 
-      - name: Cache node modules
-        uses: actions/cache@v4
+      - name: Install Dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Build Packages
+        run: pnpm build
+
+      - name: Lint and Format
+        run: pnpm lint && pnpm format:check
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
         with:
-          path: node_modules
-          key: npm-deps-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            npm-deps-${{ hashFiles('package-lock.json') }}
-
-      - name: Setup packages
-        run: |
-          npm ci
-
-      - name: Test
-        run: |
-          npm run test
-
-      - name: Release Info
-        run: npm whoami && npx auto info || echo 'auto info returned 1'
-
-      - name: Create Release
-        run: npm run release
+          version: pnpm ci:version:release
+          publish: pnpm ci:publish:release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

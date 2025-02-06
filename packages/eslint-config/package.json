@@ -1,39 +1,49 @@
 {
   "name": "@salutejs/eslint-config",
-  "version": "2.9.4",
-  "description": "Salute eslint config ",
+  "version": "2.0.0",
+  "description": "Salute eslint config",
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-config",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/salute-developers/grail.git"
   },
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
+  "type": "module",
   "exports": {
-    ".": {
-      "require": "./index.js",
-      "import": "./index.mjs"
-    },
-    "./flat": "./flat/index.mjs"
+    "./flat": "./dist/esm/flat.js",
+    ".": "./dist/cjs/legacy.cjs"
   },
-  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run build:cjs && pnpm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc",
+    "lint": "eslint ./src"
+  },
   "dependencies": {
-    "@salutejs/eslint-config-base": "*",
-    "eslint-plugin-salute-rules": "*"
+    "@eslint/js": "^9.20.0",
+    "@next/eslint-plugin-next": "^15.1.7",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-compiler": "beta",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-perf": "^3.3.3",
+    "eslint-plugin-salute-react": "workspace:*",
+    "globals": "^15.15.0",
+    "typescript-eslint": "^8.24.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "9.20.1",
+    "typescript": "5.7.3"
   },
   "peerDependencies": {
-    "@salutejs/prettier-config": "*",
-    "@typescript-eslint/eslint-plugin": ">=8",
-    "@typescript-eslint/parser": ">=8",
-    "eslint": ">=8",
-    "eslint-config-prettier": ">=9",
-    "eslint-plugin-import": ">=2",
-    "eslint-plugin-jsx-a11y": ">=6",
-    "eslint-plugin-prettier": ">=5",
-    "eslint-plugin-react": ">=7",
-    "eslint-plugin-react-hooks": ">=4",
-    "eslint-plugin-react-perf": ">=3",
-    "prettier": ">=3.1",
-    "typescript": ">=4.3.5"
+    "eslint": "^8.57.0 || ^9.0.0",
+    "typescript": ">=4.8.4 <5.8.0"
   },
   "publishConfig": {
     "access": "public"

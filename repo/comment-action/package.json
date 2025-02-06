@@ -1,0 +1,30 @@
+{
+  "name": "@repo/comment-action",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Creates a comment on the current PR",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@actions/core": "1.11.1",
+    "@actions/github": "6.0.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "22.13.4",
+    "ansi-regex": "6.1.0",
+    "emoji-regex": "10.4.0",
+    "typescript": "5.7.3",
+    "vitest": "3.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

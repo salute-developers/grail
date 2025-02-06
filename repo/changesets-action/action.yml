@@ -1,0 +1,5 @@
+name: "Changesets Action"
+description: "Creates a changeset for the current PR"
+runs:
+  using: "node20"
+  main: "dist/index.js"
