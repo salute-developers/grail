@@ -1,7 +1,7 @@
-name: Release
+name: Snapshot Release
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -16,8 +16,8 @@ env:
   NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
 jobs:
-  release:
-    name: Release
+  snapshot:
+    name: Snapshot Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -41,11 +41,11 @@ jobs:
       - name: Lint and Format
         run: pnpm lint && pnpm format:check
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Create Snapshot Release
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm ci:version:release
-          publish: pnpm ci:publish:release
+          version: pnpm ci:version:snapshot
+          publish: pnpm ci:publish:snapshot
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
