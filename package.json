@@ -1,31 +1,27 @@
 {
-  "name": "grail",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Holy grail of Salute Team configs",
-  "homepage": "https://github.com/salute-developers/grail#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/salute-developers/grail.git"
-  },
-  "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "fmt": "prettier --write .",
-    "fmt:check": "prettier --check .",
-    "release": "auto shipit",
-    "test": "npm run test -w eslint-plugin-salute-rules"
-  },
-  "devDependencies": {
-    "@auto-it/conventional-commits": "11.2.1",
-    "@auto-it/npm": "11.2.1",
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
-    "auto": "11.2.1",
-    "lerna": "8.1.8",
-    "prettier": "3.3.3",
-    "prettier-plugin-packagejson": "2.5.2"
-  }
+    "name": "grail",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "turbo build",
+        "changeset": "changeset",
+        "ci:publish:release": "changeset publish",
+        "ci:publish:snapshot": "changeset publish --snapshot --no-git-tag --tag canary",
+        "ci:version:release": "changeset version && pnpm i && pnpm format && pnpm lint",
+        "ci:version:snapshot": "changeset version --snapshot canary && pnpm i && pnpm format && pnpm lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md,json,yaml,yml}\"",
+        "format:check": "prettier --check \"**/*.{ts,tsx,md,json,yaml,yml}\"",
+        "lint": "turbo lint"
+    },
+    "devDependencies": {
+        "@changesets/cli": "2.27.12",
+        "prettier": "3.4.2",
+        "prettier-plugin-packagejson": "2.5.8",
+        "turbo": "2.4.0",
+        "typescript": "5.7.3"
+    },
+    "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+    "engines": {
+        "node": ">=22"
+    }
 }
