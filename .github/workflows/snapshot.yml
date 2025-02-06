@@ -1,0 +1,66 @@
+name: Snapshot Release
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  CI: true
+  NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+
+jobs:
+  snapshot:
+    name: Snapshot Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          check-latest: true
+
+      - name: Install Dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Build Packages
+        run: pnpm build
+
+      - name: Create Changeset
+        run: pnpm changeset add --empty
+
+      - name: Add Snapshot Changeset
+        uses: ./repo/changesets-action
+
+      - name: Lint and Format
+        run: pnpm format && pnpm lint
+
+      - name: Version Snapshot
+        run: pnpm changeset version --snapshot canary
+
+      - name: Publish Snapshot
+        id: publish
+        run: |
+          publish_result=$(pnpm changeset publish --tag canary --no-git-tag --snapshot)
+          echo "$publish_result"
+          echo "publish_output<<EOF" >> $GITHUB_OUTPUT
+          echo "$publish_result" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Update PR Comment
+        uses: ./repo/comment-action
+        with:
+          publish-output: ${{ steps.publish.outputs.publish_output }}
+          github-token: ${{ github.token }}

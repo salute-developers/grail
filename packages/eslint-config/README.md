@@ -1,42 +1,69 @@
-# ESlint config from Salute Frontend Team
+# @salutejs/eslint-config
 
-## Install
+ESLint configuration preset.
 
-```bash
-npm i -D @salutejs/eslint-config eslint@8
-```
-
-If `legacy-peer-deps` is enabled:
+## Installation
 
 ```bash
-npm i -D @salutejs/prettier-config @typescript-eslint/eslint-plugin@8 @typescript-eslint/parser@8 eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-perf prettier
+npm install --save-dev @salutejs/eslint-config
+# or
+yarn add --dev @salutejs/eslint-config
+# or
+pnpm add -D @salutejs/eslint-config
+# or
+bun add -D @salutejs/eslint-config
 ```
+
+## Requirements
+
+- Node.js 18.x or higher
+- ESLint 8.57.0 or higher, or 9.x
+- TypeScript 4.8.4 - 5.7.x
+
+## Included Plugins
+
+- `@eslint/js` - Core ESLint rules
+- `@typescript-eslint` - TypeScript support and rules
+- `@next/eslint-plugin-next` - Next.js specific rules
+- `eslint-plugin-react` - React core rules
+- `eslint-plugin-react-hooks` - React Hooks rules
+- `eslint-plugin-react-perf` - React performance rules
+- `eslint-plugin-react-compiler` - React compiler optimizations
+- `eslint-plugin-jsx-a11y` - Accessibility rules
+- `eslint-plugin-import` - ES6+ import/export rules
+- `eslint-plugin-salute-react` - Custom Salute React rules
+- `eslint-config-prettier` - Turns off ESLint rules that conflict with Prettier
 
 ## Usage
 
-### ESLint
+### Flat Config (recommended for ESLint 9.x)
 
-```json
-{
-  "extends": ["all-other-configs", "@salutejs/eslint-config"]
-}
-```
+```js
+// eslint.config.js
+import {
+  configBase,
+  configReact,
+  configNextJs,
+  configReactWithCompiler,
+} from "@salutejs/eslint-config/flat";
 
-## Flat config for eslint
-
-Also, we added a [flat configuration for ESLint](https://eslint.org/docs/latest/use/configure/configuration-files)
-
-### Usage
-
-```mjs
-// Other imports
-import flatConfig from "@salutejs/eslint-config/flat"
-
-
-/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-  ...flatConfig,
-  //... Other settings
+  ...configBase,
+  ...configReact,
+  ...configNextJs,
+  ...configReactWithCompiler,
 ];
-
 ```
+
+### Legacy Config
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ["@salutejs/eslint-config"],
+};
+```
+
+## License
+
+MIT
