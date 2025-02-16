@@ -3,7 +3,7 @@
   "include": ["src/plugin-salute-react.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "outDir": "./dist/esm",
+    "outDir": "./dist",
     "rootDir": "./src",
     "resolveJsonModule": true
   }

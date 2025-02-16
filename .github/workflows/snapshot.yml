@@ -44,9 +44,6 @@ jobs:
       - name: Add Snapshot Changeset
         uses: ./repo/changesets-action
 
-      - name: Lint and Format
-        run: pnpm format && pnpm lint
-
       - name: Version Snapshot
         run: pnpm changeset version --snapshot canary
 

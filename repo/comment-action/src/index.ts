@@ -8,7 +8,9 @@ try {
 
   core.setOutput("versions", publishedVersions);
 
-  if (!publishedVersions.length) {
+  const firstPackage = publishedVersions.at(0);
+
+  if (!firstPackage) {
     core.info("No published versions found in the output");
 
     process.exit(0);
@@ -17,7 +19,9 @@ try {
   const token = core.getInput("github-token", { required: true });
   const octokit = github.getOctokit(token);
 
-  const commentBody = `## 📦 Snapshot Release\n\nThe following packages have been published:\n\n${publishedVersions.map((v) => `\`\`\`\n${v}\n\`\`\``).join("\n")}`;
+  const version = firstPackage.split("@").pop();
+
+  const commentBody = `## 📦 Snapshot Release\n\n\`\`\`\n${version}\n\`\`\`\n\nThe following packages have been published:\n\n${publishedVersions.map((v) => `\`\`\`\n${v}\n\`\`\``).join("\n")}`;
 
   const { data: comments } = await octokit.rest.issues.listComments({
     ...github.context.repo,

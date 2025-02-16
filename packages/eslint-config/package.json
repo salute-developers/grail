@@ -10,13 +10,10 @@
   "author": "Salute Frontend Team <salute.developers@gmail.com>",
   "type": "module",
   "exports": {
-    "./flat": "./dist/esm/flat.js",
-    ".": "./dist/cjs/legacy.cjs"
+    ".": "./dist/flat.js"
   },
   "scripts": {
-    "build": "pnpm run build:cjs && pnpm run build:esm",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:esm": "tsc",
+    "build": "tsc",
     "lint": "eslint ./src"
   },
   "dependencies": {

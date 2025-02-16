@@ -5,39 +5,36 @@ ESLint plugin with custom rules from the Speed Team.
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-salute-react
+npm install --save-dev eslint-plugin-salute-react eslint
 # or
-yarn add -D eslint-plugin-salute-react
+yarn add -D eslint-plugin-salute-react eslint
 # or
-pnpm add -D eslint-plugin-salute-react
+pnpm add -D eslint-plugin-salute-react eslint
 # or
-bun add -D eslint-plugin-salute-react
+bun add -D eslint-plugin-salute-react eslint
 ```
 
 ## Requirements
 
-- ESLint v8.50.0+ or v9.0.0+
+- ESLint v8.57.0+ or v9.0.0+
 - @typescript-eslint/eslint-plugin v8.0.0+
 - @typescript-eslint/parser v8.0.0+
 - typescript-eslint v8.0.0+
 
 ## Usage
 
-### Flat Config (recommended)
+### Flat Config
 
 ```js
-import salute from "eslint-plugin-salute-react/flat";
+// eslint.config.js
+import salute from "eslint-plugin-salute-react";
 
 export default [salute.configs.recommended];
 ```
 
-### Legacy Config
+### Legacy Config (for ESLint < v8.57.0)
 
-```js
-module.exports = {
-  extends: ["plugin:salute-react/recommended"],
-};
-```
+See [@eslint/compat](https://www.npmjs.com/package/@eslint/compat) package and [ESLint Compatibility Utilities blog post](https://eslint.org/blog/2024/05/eslint-compatibility-utilities).
 
 ## Rules
 

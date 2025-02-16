@@ -2,7 +2,7 @@ import js from "@eslint/js";
 import globals from "globals";
 import reactPlugin from "eslint-plugin-react";
 import tseslint, { ConfigArray } from "typescript-eslint";
-import salutePlugin from "eslint-plugin-salute-react/flat";
+import salutePlugin from "eslint-plugin-salute-react";
 // @ts-expect-error -- does not have types
 import pluginNext from "@next/eslint-plugin-next";
 // @ts-expect-error -- does not have types

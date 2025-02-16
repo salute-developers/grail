@@ -7,7 +7,7 @@ const requirePackageJson = createRequire(import.meta.url);
 
 const { name, version } =
   // `importing here would bypass the TSConfig's `"rootDir": "src"`
-  requirePackageJson("../../package.json") as typeof import("../package.json");
+  requirePackageJson("../package.json") as typeof import("../package.json");
 
 const plugin = {
   configs: {
@@ -20,7 +20,7 @@ const plugin = {
     version,
   },
   rules,
-};
+} as const satisfies TSESLint.FlatConfig.Plugin;
 
 const recommended: TSESLint.FlatConfig.Config = {
   plugins: {
