@@ -5,7 +5,7 @@ import {
   configNextJs,
   configReact,
   configReactWithCompiler,
-} from "@salutejs/eslint-config/flat";
+} from "@salutejs/eslint-config";
 
 export default [
   ...configBase,

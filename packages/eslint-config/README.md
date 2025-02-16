@@ -5,13 +5,13 @@ ESLint configuration preset.
 ## Installation
 
 ```bash
-npm install --save-dev @salutejs/eslint-config
+npm install --save-dev @salutejs/eslint-config eslint
 # or
-yarn add --dev @salutejs/eslint-config
+yarn add --dev @salutejs/eslint-config eslint
 # or
-pnpm add -D @salutejs/eslint-config
+pnpm add -D @salutejs/eslint-config eslint
 # or
-bun add -D @salutejs/eslint-config
+bun add -D @salutejs/eslint-config eslint
 ```
 
 ## Requirements
@@ -36,8 +36,6 @@ bun add -D @salutejs/eslint-config
 
 ## Usage
 
-### Flat Config (recommended for ESLint 9.x)
-
 ```js
 // eslint.config.js
 import {
@@ -45,7 +43,7 @@ import {
   configReact,
   configNextJs,
   configReactWithCompiler,
-} from "@salutejs/eslint-config/flat";
+} from "@salutejs/eslint-config";
 
 export default [
   ...configBase,
@@ -55,14 +53,9 @@ export default [
 ];
 ```
 
-### Legacy Config
+### Legacy Config (for ESLint < v8.57.0)
 
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ["@salutejs/eslint-config"],
-};
-```
+See [@eslint/compat](https://www.npmjs.com/package/@eslint/compat) package and [ESLint Compatibility Utilities blog post](https://eslint.org/blog/2024/05/eslint-compatibility-utilities).
 
 ## License
 

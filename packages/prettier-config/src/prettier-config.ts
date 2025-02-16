@@ -1,3 +1,5 @@
+import { Config } from "prettier";
+
 export default {
   arrowParens: "always",
   printWidth: 120,
@@ -8,4 +10,4 @@ export default {
   singleQuote: true,
   tabWidth: 4,
   trailingComma: "all",
-};
+} as const satisfies Config;
