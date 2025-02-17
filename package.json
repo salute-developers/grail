@@ -1,31 +1,32 @@
 {
   "name": "grail",
-  "version": "0.0.0",
   "private": true,
-  "description": "Holy grail of Salute Team configs",
-  "homepage": "https://github.com/salute-developers/grail#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/salute-developers/grail.git"
-  },
-  "author": "Salute Frontend Team <salute.developers@gmail.com>",
-  "workspaces": [
-    "packages/*"
-  ],
+  "type": "module",
   "scripts": {
-    "fmt": "prettier --write .",
-    "fmt:check": "prettier --check .",
-    "release": "auto shipit",
-    "test": "npm run test -w eslint-plugin-salute-rules"
+    "build": "turbo build",
+    "changeset": "changeset",
+    "ci:publish:release": "changeset publish",
+    "ci:version:release": "changeset version && pnpm i && pnpm format && pnpm lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json,yaml,yml}\"",
+    "inspect-config": "turbo inspect-config",
+    "lint": "turbo lint",
+    "test": "turbo test"
   },
   "devDependencies": {
-    "@auto-it/conventional-commits": "11.2.1",
-    "@auto-it/npm": "11.2.1",
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
-    "auto": "11.2.1",
-    "lerna": "8.1.8",
-    "prettier": "3.3.3",
-    "prettier-plugin-packagejson": "2.5.2"
+    "@changesets/cli": "2.27.12",
+    "prettier": "3.5.1",
+    "prettier-plugin-packagejson": "2.5.8",
+    "turbo": "2.4.2",
+    "typescript": "5.7.3"
+  },
+  "packageManager": "pnpm@10.4.0+sha512.6b849d0787d97f8f4e1f03a9b8ff8f038e79e153d6f11ae539ae7c435ff9e796df6a862c991502695c7f9e8fac8aeafc1ac5a8dab47e36148d183832d886dd52",
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

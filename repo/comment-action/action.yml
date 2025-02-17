@@ -1,0 +1,16 @@
+name: "PR Comment Action"
+description: "Updates PR comments with snapshot release information"
+inputs:
+  publish-output:
+    description: "The output from the publish step"
+    required: true
+  github-token:
+    description: "GitHub token"
+    required: true
+    default: ${{ github.token }}
+outputs:
+  versions:
+    description: "The list of published versions"
+runs:
+  using: "node20"
+  main: "dist/index.js"

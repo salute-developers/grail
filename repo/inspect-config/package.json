@@ -1,0 +1,19 @@
+{
+  "name": "@repo/inspect-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "config-inspector build",
+    "inspect-config": "config-inspector"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "1.0.0",
+    "@eslint/js": "9.20.0",
+    "@salutejs/eslint-config": "workspace:*",
+    "eslint": "9.20.1",
+    "serve": "14.2.4",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.24.0"
+  }
+}

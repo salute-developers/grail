@@ -1,0 +1,13 @@
+import { Config } from "prettier";
+
+export default {
+  arrowParens: "always",
+  printWidth: 120,
+  bracketSameLine: false,
+  jsxSingleQuote: false,
+  endOfLine: "auto",
+  semi: true,
+  singleQuote: true,
+  tabWidth: 4,
+  trailingComma: "all",
+} as const satisfies Config;
