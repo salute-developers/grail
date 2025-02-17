@@ -33,6 +33,7 @@ bun add -D @salutejs/eslint-config eslint
 - `eslint-plugin-import` - ES6+ import/export rules
 - `eslint-plugin-salute-react` - Custom Salute React rules
 - `eslint-config-prettier` - Turns off ESLint rules that conflict with Prettier
+- `eslint-plugin-cypress` - Cypress rules
 
 ## Usage
 
@@ -40,17 +41,56 @@ bun add -D @salutejs/eslint-config eslint
 // eslint.config.js
 import {
   configBase,
-  configReact,
   configNextJs,
-  configReactWithCompiler,
+  configReact,
+  configReactCompiler,
+  configCypress,
+  createConfig,
+  configPrettier,
+  saluteRules,
 } from "@salutejs/eslint-config";
 
-export default [
-  ...configBase,
-  ...configReact,
-  ...configNextJs,
-  ...configReactWithCompiler,
-];
+/**
+ * @type {import('typescript-eslint').ConfigArray}
+ */
+export default createConfig(
+  configBase,
+  configReact,
+  configNextJs,
+  configReactCompiler,
+  configCypress,
+  configPrettier, // always last
+  { rules: saluteRules }, // always last
+);
+```
+
+`createConfig` is an alias for `tseslint.config`, see [typescript-eslint#config](https://typescript-eslint.io/packages/typescript-eslint#config).
+
+> Do not use `configReactCompiler` and `configReactPerf` together. `configReactCompiler` is recommended.
+
+### Customizing `configCypress`:
+
+```js
+createConfig({
+  files: ["path-to-cypress-files/*"],
+  extends: [configCypress],
+});
+```
+
+### Customizing `rules`:
+
+```js
+import { saluteRules } from "@salutejs/eslint-config";
+
+createConfig(
+  // configs
+  {
+    rules: {
+      ...saluteRules,
+      "no-console": "off",
+    },
+  },
+);
 ```
 
 ### Legacy Config (for ESLint < v8.57.0)

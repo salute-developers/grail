@@ -4,12 +4,24 @@ import {
   configBase,
   configNextJs,
   configReact,
-  configReactWithCompiler,
+  configReactCompiler,
+  configCypress,
+  configReactPerf,
+  createConfig,
+  configPrettier,
+  saluteRules,
 } from "@salutejs/eslint-config";
 
-export default [
-  ...configBase,
-  ...configReact,
-  ...configNextJs,
-  ...configReactWithCompiler,
-];
+/**
+ * @type {import('typescript-eslint').ConfigArray}
+ */
+export default createConfig(
+  configBase,
+  configReact,
+  configNextJs,
+  configReactPerf,
+  configReactCompiler,
+  configCypress,
+  configPrettier,
+  { rules: saluteRules },
+);
