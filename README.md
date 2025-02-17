@@ -25,7 +25,7 @@ pnpm i
 ## Check eslint config visually
 
 ```bash
-pnpm inspect-config
+pnpm dev
 ```
 
 ## Getting started with `pnpm`:

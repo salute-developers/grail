@@ -17,12 +17,27 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import eslintConfigPrettier from "eslint-config-prettier";
 // @ts-expect-error -- does not have types
 import importPlugin from "eslint-plugin-import";
-import { rules } from "./rules.js";
+// @ts-expect-error -- does not have types
+import pluginCypress from "eslint-plugin-cypress/flat";
+
+export { saluteRules } from "./rules.js";
 
 export const configBase: ConfigArray = tseslint.config(
   js.configs.recommended,
   tseslint.configs.recommended,
-  salutePlugin.configs.recommended,
+  {
+    name: "globals",
+    files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.commonjs,
+        ...globals.node,
+        ...globals.vitest,
+        ...globals.jest,
+      },
+    },
+  },
+
   {
     files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
     extends: [
@@ -30,11 +45,10 @@ export const configBase: ConfigArray = tseslint.config(
       importPlugin.flatConfigs.typescript,
     ],
   },
-  {
-    rules,
-  },
-  eslintConfigPrettier,
 );
+
+export const configPrettier: ConfigArray =
+  tseslint.config(eslintConfigPrettier);
 
 export const configReact: ConfigArray = tseslint.config(
   {
@@ -67,10 +81,12 @@ export const configReact: ConfigArray = tseslint.config(
     settings: { react: { version: "detect" } },
     rules: {
       ...pluginReactHooks.configs.recommended.rules,
-      // React scope no longer necessary with new JSX transform.
-      "react/react-in-jsx-scope": "off",
     },
   },
+  salutePlugin.configs.recommended,
+);
+
+export const configReactPerf: ConfigArray = tseslint.config(
   reactPerfPlugin.configs.flat.recommended,
 );
 
@@ -84,6 +100,13 @@ export const configNextJs: ConfigArray = tseslint.config({
   },
 });
 
-export const configReactWithCompiler: ConfigArray = tseslint.config(
+export const configReactCompiler: ConfigArray = tseslint.config(
   reactCompiler.configs.recommended,
 );
+
+export const configCypress: ConfigArray = tseslint.config({
+  files: ["cypress/*"],
+  extends: [pluginCypress.configs.recommended],
+});
+
+export const createConfig = tseslint.config;

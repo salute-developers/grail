@@ -21,6 +21,9 @@
     "build:esm": "tsc",
     "lint": "eslint ./src"
   },
+  "dependencies": {
+    "prettier-plugin-packagejson": "2.5.8"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
