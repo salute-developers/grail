@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "config-inspector build",
+    "build": "config-inspector build --base grail/",
     "dev": "config-inspector"
   },
   "devDependencies": {
