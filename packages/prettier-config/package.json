@@ -1,6 +1,6 @@
 {
   "name": "@salutejs/prettier-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Salute prettier config",
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/prettier-config",
   "repository": {

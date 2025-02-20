@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-salute-react",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Salute eslint plugin for react",
   "homepage": "https://github.com/salute-developers/grail/tree/master/packages/eslint-plugin-salute-react",
   "repository": {
