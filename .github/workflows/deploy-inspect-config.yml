@@ -3,7 +3,7 @@ env:
   CI: true
 on:
   push:
-    branches: ["canary"]
+    branches: ["master"]
     paths:
       - "repo/config-inspector-docs/**"
       - ".github/workflows/deploy-inspect-config.yml"
