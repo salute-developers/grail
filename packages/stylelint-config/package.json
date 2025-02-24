@@ -24,7 +24,7 @@
   "dependencies": {
     "postcss-styled-syntax": "0.7.1",
     "stylelint-config-recommended": "15.0.0",
-    "stylelint-high-performance-animation": "1.10.0",
+    "stylelint-high-performance-animation": "1.11.0",
     "stylelint-order": "6.0.4",
     "stylelint-processor-styled-components": "1.10.0",
     "stylelint-scss": "6.11.0"
