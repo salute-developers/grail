@@ -4,16 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "config-inspector build --base grail/",
+    "build": "if [[ -n \"$GITHUB_ACTIONS\" ]]; then config-inspector build --base grail/; else config-inspector build; fi",
     "dev": "config-inspector"
   },
   "devDependencies": {
     "@eslint/config-inspector": "1.0.0",
-    "@eslint/js": "9.20.0",
+    "@eslint/js": "9.21.0",
     "@salutejs/eslint-config": "workspace:*",
-    "eslint": "9.20.1",
+    "eslint": "9.21.0",
     "serve": "14.2.4",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.24.1"
+    "typescript-eslint": "8.25.0"
   }
 }
