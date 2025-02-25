@@ -37,17 +37,21 @@ jobs:
       - name: Build Packages
         run: pnpm build
 
-      - name: Create Changeset
-        run: pnpm changeset add --empty
-
-      - name: Add Snapshot Changeset
-        uses: ./repo/changesets-action
-
       - name: Version Snapshot
-        run: pnpm changeset version --snapshot canary
+        id: version
+        run: |
+          version_result=$(pnpm changeset version --snapshot canary || true)
+          echo "$version_result"
+          if [[ "$version_result" == *"No unreleased changesets found, exiting."* ]]; then
+            echo "No changesets found, continuing workflow"
+            echo "has_changesets=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changesets=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Publish Snapshot
         id: publish
+        if: steps.version.outputs.has_changesets == 'true'
         run: |
           publish_result=$(pnpm changeset publish --tag canary --no-git-tag --snapshot)
           echo "$publish_result"
@@ -57,6 +61,7 @@ jobs:
 
       - name: Update PR Comment
         uses: ./repo/comment-action
+        if: steps.version.outputs.has_changesets == 'true'
         with:
           publish-output: ${{ steps.publish.outputs.publish_output }}
           github-token: ${{ github.token }}
