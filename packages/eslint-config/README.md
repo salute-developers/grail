@@ -60,7 +60,13 @@ export default createConfig(
   configReactCompiler,
   configCypress,
   configPrettier, // always last
-  { rules: saluteRules }, // always last
+  {
+    // always last
+    rules: {
+      ...saluteRules, // for backend and frontend code
+      ...reactRules, // only for frontend
+    },
+  },
 );
 ```
 
@@ -86,7 +92,8 @@ createConfig(
   // configs
   {
     rules: {
-      ...saluteRules,
+      ...saluteRules, // for backend and frontend code
+      ...reactRules, // only for frontend
       "no-console": "off",
     },
   },

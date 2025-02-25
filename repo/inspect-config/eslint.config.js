@@ -10,6 +10,7 @@ import {
   createConfig,
   configPrettier,
   saluteRules,
+  reactRules,
 } from "@salutejs/eslint-config";
 
 /**
@@ -23,5 +24,5 @@ export default createConfig(
   configReactCompiler,
   configCypress,
   configPrettier,
-  { rules: saluteRules },
+  { rules: { ...saluteRules, ...reactRules } },
 );

@@ -5,6 +5,19 @@ type Rules = ESLint.ConfigData["rules"];
 const typescriptRules = {
   "@typescript-eslint/no-empty-function": "off",
   "@typescript-eslint/explicit-function-return-type": "off",
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      args: "all",
+      argsIgnorePattern: "^_",
+      caughtErrors: "all",
+      caughtErrorsIgnorePattern: "^_",
+      destructuredArrayIgnorePattern: "^_",
+      varsIgnorePattern: "^_",
+      ignoreRestSiblings: true,
+    },
+  ],
+  "@typescript-eslint/no-unused-expressions": "off",
 } as const satisfies Rules;
 
 const importRules = {
@@ -43,23 +56,10 @@ const bestPracticesRules = {
   "no-shadow": "warn",
   "consistent-return": "off",
   "no-unused-expressions": "off",
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    {
-      args: "all",
-      argsIgnorePattern: "^_",
-      caughtErrors: "all",
-      caughtErrorsIgnorePattern: "^_",
-      destructuredArrayIgnorePattern: "^_",
-      varsIgnorePattern: "^_",
-      ignoreRestSiblings: true,
-    },
-  ],
 } as const satisfies Rules;
 
-const reactRules = {
+export const reactRules = {
   "react/prop-types": "off",
-  "react/react-in-jsx-scope": "off",
   "react-hooks/exhaustive-deps": "error",
 } as const satisfies Rules;
 
@@ -69,5 +69,4 @@ export const saluteRules = {
   ...codeOrganizationRules,
   ...codeFormattingRules,
   ...bestPracticesRules,
-  ...reactRules,
 } as const satisfies Rules;
