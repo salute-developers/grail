@@ -18,6 +18,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  CI: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
