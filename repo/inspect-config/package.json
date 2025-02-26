@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "if [[ -n \"$CI\" ]]; then config-inspector build --base grail/; else config-inspector build; fi",
+    "build": "if [ -n \"$CI\" ]; then config-inspector build --base grail/; else config-inspector build; fi",
     "dev": "config-inspector"
   },
   "devDependencies": {

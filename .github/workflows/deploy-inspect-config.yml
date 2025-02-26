@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  CI: true
+  CI: "true"
 
 jobs:
   build:
