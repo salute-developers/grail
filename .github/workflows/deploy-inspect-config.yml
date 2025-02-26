@@ -1,6 +1,5 @@
 name: Deploy Config Inspector to Pages
-env:
-  CI: true
+
 on:
   push:
     branches: ["master"]

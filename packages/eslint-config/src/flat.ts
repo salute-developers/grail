@@ -20,7 +20,7 @@ import importPlugin from "eslint-plugin-import";
 // @ts-expect-error -- does not have types
 import pluginCypress from "eslint-plugin-cypress/flat";
 
-export { saluteRules } from "./rules.js";
+export { saluteRules, reactRules } from "./rules.js";
 
 export const configBase: ConfigArray = tseslint.config(
   js.configs.recommended,
@@ -37,7 +37,6 @@ export const configBase: ConfigArray = tseslint.config(
       },
     },
   },
-
   {
     files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
     extends: [
