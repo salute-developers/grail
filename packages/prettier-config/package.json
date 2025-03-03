@@ -22,7 +22,7 @@
     "lint": "eslint ./src"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "2.5.8"
+    "prettier-plugin-packagejson": "2.5.10"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
