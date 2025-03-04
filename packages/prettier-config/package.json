@@ -22,13 +22,13 @@
     "lint": "eslint ./src"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "2.5.8"
+    "prettier-plugin-packagejson": "2.5.10"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "9.21.0",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   },
   "peerDependencies": {
     "prettier": "^3.4.0"

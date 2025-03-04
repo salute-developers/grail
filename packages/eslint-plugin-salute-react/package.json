@@ -19,16 +19,16 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.25.0"
+    "@typescript-eslint/utils": "^8.26.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "22.13.5",
-    "@typescript-eslint/rule-tester": "8.25.0",
+    "@types/node": "22.13.9",
+    "@typescript-eslint/rule-tester": "8.26.0",
     "eslint": "9.21.0",
     "eslint-plugin-eslint-plugin": "6.4.0",
-    "typescript": "5.7.3",
+    "typescript": "5.8.2",
     "vitest": "3.0.7"
   },
   "peerDependencies": {

@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import globals from "globals";
 import reactPlugin from "eslint-plugin-react";
 import tseslint, { ConfigArray } from "typescript-eslint";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 import salutePlugin from "eslint-plugin-salute-react";
 // @ts-expect-error -- does not have types
 import pluginNext from "@next/eslint-plugin-next";
@@ -9,8 +10,6 @@ import pluginNext from "@next/eslint-plugin-next";
 import reactPerfPlugin from "eslint-plugin-react-perf";
 // @ts-expect-error -- does not have types
 import reactCompiler from "eslint-plugin-react-compiler";
-// @ts-expect-error -- does not have types
-import pluginReactHooks from "eslint-plugin-react-hooks";
 // @ts-expect-error -- does not have types
 import jsxA11y from "eslint-plugin-jsx-a11y";
 // @ts-expect-error -- does not have types
