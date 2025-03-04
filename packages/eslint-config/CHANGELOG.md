@@ -1,5 +1,11 @@
 # @salutejs/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- c199f84: Bump dependencies to latest versions
+
 ## 3.1.0
 
 ### Minor Changes
