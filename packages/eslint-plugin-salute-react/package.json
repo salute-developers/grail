@@ -24,7 +24,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "22.13.9",
+    "@types/node": "22.15.17",
     "@typescript-eslint/rule-tester": "8.26.0",
     "eslint": "9.21.0",
     "eslint-plugin-eslint-plugin": "6.4.0",
