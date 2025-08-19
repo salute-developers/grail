@@ -78,7 +78,10 @@ export const configReact: ConfigArray = tseslint.config(
     },
     settings: { react: { version: "detect" } },
     rules: {
-      ...pluginReactHooks.configs.recommended.rules,
+      "react-hooks/rules-of-hooks":
+        pluginReactHooks.configs.recommended.rules[
+          "react-hooks/rules-of-hooks"
+        ],
     },
   },
   salutePlugin.configs.recommended,
