@@ -1,5 +1,11 @@
 # @salutejs/eslint-config
 
+## 3.2.2
+
+### Patch Changes
+
+- cc6f474: Re-write flat config to exclude unnessesary exhaustive-deps/ rule
+
 ## 3.2.1
 
 ### Patch Changes
