@@ -8,7 +8,7 @@
     "dev": "config-inspector"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "1.0.1",
+    "@eslint/config-inspector": "1.2.0",
     "@eslint/js": "9.21.0",
     "@salutejs/eslint-config": "workspace:*",
     "eslint": "9.21.0",
