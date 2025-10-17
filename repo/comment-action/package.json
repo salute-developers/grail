@@ -13,16 +13,16 @@
   },
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@actions/github": "6.0.0"
+    "@actions/github": "6.0.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "24.3.0",
-    "ansi-regex": "6.1.0",
-    "emoji-regex": "10.4.0",
-    "typescript": "5.8.2",
-    "vitest": "3.0.7"
+    "@types/node": "24.8.1",
+    "ansi-regex": "6.2.2",
+    "emoji-regex": "10.6.0",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
   },
   "publishConfig": {
     "access": "public"
