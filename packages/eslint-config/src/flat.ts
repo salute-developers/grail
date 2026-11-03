@@ -8,16 +8,12 @@ import salutePlugin from "eslint-plugin-salute-react";
 import pluginNext from "@next/eslint-plugin-next";
 // @ts-expect-error -- does not have types
 import reactPerfPlugin from "eslint-plugin-react-perf";
-// @ts-expect-error -- does not have types
 import reactCompiler from "eslint-plugin-react-compiler";
 // @ts-expect-error -- does not have types
 import jsxA11y from "eslint-plugin-jsx-a11y";
-// @ts-expect-error -- does not have types
 import eslintConfigPrettier from "eslint-config-prettier";
-// @ts-expect-error -- does not have types
-import importPlugin from "eslint-plugin-import";
-// @ts-expect-error -- does not have types
-import pluginCypress from "eslint-plugin-cypress/flat";
+import importPlugin from "eslint-plugin-import-x";
+import pluginCypress from "eslint-plugin-cypress";
 
 export { saluteRules, reactRules } from "./rules.js";
 

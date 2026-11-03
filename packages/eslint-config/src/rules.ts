@@ -21,8 +21,8 @@ const typescriptRules = {
 } as const satisfies Rules;
 
 const importRules = {
-  "import/prefer-default-export": "off", // @grape: https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/
-  "import/order": [
+  "import-x/prefer-default-export": "off", // @grape: https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/
+  "import-x/order": [
     "error",
     {
       groups: [
@@ -35,9 +35,9 @@ const importRules = {
       "newlines-between": "always",
     },
   ],
-  "import/no-unresolved": "off",
-  "import/extensions": "off",
-  "import/no-extraneous-dependencies": ["off"],
+  "import-x/no-unresolved": "off",
+  "import-x/extensions": "off",
+  "import-x/no-extraneous-dependencies": ["off"],
 } as const satisfies Rules;
 
 const codeOrganizationRules = {
