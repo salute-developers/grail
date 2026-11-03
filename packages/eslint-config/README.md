@@ -16,9 +16,9 @@ bun add -D @salutejs/eslint-config eslint
 
 ## Requirements
 
-- Node.js 18.x or higher
-- ESLint 8.57.0 or higher, or 9.x
-- TypeScript 4.8.4 - 5.7.x
+- Node.js 20.19+ or 22.13+ (for ESLint 10)
+- ESLint 9.x or 10.x
+- TypeScript 4.8.4 - 6.0.x
 
 ## Included Plugins
 
@@ -30,7 +30,7 @@ bun add -D @salutejs/eslint-config eslint
 - `eslint-plugin-react-perf` - React performance rules
 - `eslint-plugin-react-compiler` - React compiler optimizations
 - `eslint-plugin-jsx-a11y` - Accessibility rules
-- `eslint-plugin-import` - ES6+ import/export rules
+- `eslint-plugin-import-x` - ES6+ import/export rules
 - `eslint-plugin-salute-react` - Custom Salute React rules
 - `eslint-config-prettier` - Turns off ESLint rules that conflict with Prettier
 - `eslint-plugin-cypress` - Cypress rules
@@ -99,10 +99,6 @@ createConfig(
   },
 );
 ```
-
-### Legacy Config (for ESLint < v8.57.0)
-
-See [@eslint/compat](https://www.npmjs.com/package/@eslint/compat) package and [ESLint Compatibility Utilities blog post](https://eslint.org/blog/2024/05/eslint-compatibility-utilities).
 
 ## License
 
